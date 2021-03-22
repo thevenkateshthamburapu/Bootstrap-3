@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>JS Carousel</title>
+		<link rel="icon" href="icon/bootstrap.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Carousel Example</h2>
+		<div class="container">
+			<p>Activate Carousel with JavaScript</p>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="myCarousel_1" class="carousel slide">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li class="item_1"></li>
+							<li class="item_2 active"></li>
+							<li class="item_3"></li>
+							<li class="item_4"></li>
+							<li class="item_5"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item">
+								<img src="img/snow-mountain.jpg" alt="Snow-Mountain" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Snow Mountain</h3>
+									<p>The mountains were covered with a rug of trees, green, yellow, scarlet and orange, but their bare tops were scarfed and beribboned with snow. From carved rocky outcrops, waterfalls drifted like skeins of white lawn, and in the fields we could see the amber glint of rivers and the occasional mirror-like flash of a mountain lake...</p>
+								</div>
+							</div>
+							<div class="item active">
+								<img src="img/trees.jpg" alt="Trees" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Trees</h3>
+									<p>In botany, a tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves in most species. In some usages, the definition of a tree may be narrower, including only woody plants with secondary growth, plants that are usable as lumber or plants above a specified height.</p>
+								</div>
+							</div>
+							
+							<div class="item">
+								<img src="img/aurora-borealis.jpg" alt="Aurora-Borealis" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Aurora Borealis</h3>
+									<p>An aurora, sometimes referred to as polar lights, northern lights, or southern lights, is a natural light display in the Earth's sky, predominantly seen in the high-latitude regions</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/forest.jpg" alt="Forest" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Forest</h3>
+									<p>A forest is a piece of land with many trees. Many animals need forests to live and survive. Forests are very important and grow in many places around the world. They are an ecosystem which includes many plants and animals. Temperature and rainfall are the two most important things for forests.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/railway-track.jpg" alt="Railway-Track" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Railway-Track</h3>
+									<p>A railway track or railway line is a set of two parallel rows of long pieces of steel. They are used by trains to transport people and things from one place to another.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel_1" role="button">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel_1" role="button">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Carousel Options</h2>
+		<div class="container">
+			<p><code>interval</code></p>
+			<!-- Specifies the delay (in milliseconds) between each slide. -->
+			<!-- Set interval to false(data-interval="false") to stop the items from automatically sliding -->
+			<p>The <strong>interval</strong> option specifies the delay (in milliseconds) between each slide.</p>
+			<p>In this example, we have set the interval to "500" (default is 5000).</p>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="myCarousel_2" class="carousel slide">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li class="item_1"></li>
+							<li class="item_2"></li>
+							<li class="item_3"></li>
+							<li class="item_4 active"></li>
+							<li class="item_5"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item">
+								<img src="img/snow-mountain.jpg" alt="Snow-Mountain" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Snow Mountain</h3>
+									<p>The mountains were covered with a rug of trees, green, yellow, scarlet and orange, but their bare tops were scarfed and beribboned with snow. From carved rocky outcrops, waterfalls drifted like skeins of white lawn, and in the fields we could see the amber glint of rivers and the occasional mirror-like flash of a mountain lake...</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/trees.jpg" alt="Trees" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Trees</h3>
+									<p>In botany, a tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves in most species. In some usages, the definition of a tree may be narrower, including only woody plants with secondary growth, plants that are usable as lumber or plants above a specified height.</p>
+								</div>
+							</div>
+							
+							<div class="item">
+								<img src="img/aurora-borealis.jpg" alt="Aurora-Borealis" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Aurora Borealis</h3>
+									<p>An aurora, sometimes referred to as polar lights, northern lights, or southern lights, is a natural light display in the Earth's sky, predominantly seen in the high-latitude regions</p>
+								</div>
+							</div>
+							<div class="item  active">
+								<img src="img/forest.jpg" alt="Forest" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Forest</h3>
+									<p>A forest is a piece of land with many trees. Many animals need forests to live and survive. Forests are very important and grow in many places around the world. They are an ecosystem which includes many plants and animals. Temperature and rainfall are the two most important things for forests.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/railway-track.jpg" alt="Railway-Track" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Railway-Track</h3>
+									<p>A railway track or railway line is a set of two parallel rows of long pieces of steel. They are used by trains to transport people and things from one place to another.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel_2">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel_2">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<p><code>pause</code></p>
+			<!-- Pauses the carousel from going through the next slide when the mouse pointer enters the carousel, and resumes the sliding when the mouse pointer leaves the carousel -->
+			<!-- Set pause to false to stop the ability to pause on hover-->
+			<p>The <code>pause</code> option pauses the carousel from going through the slides when the mouse pointer enters the carousel.</p>
+			<p>In this example, we have set pause to "hover" (default), which will stop the slide when your mouse pointer enters the carousel.</p>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="myCarousel_3" class="carousel slide">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li class="item_1 active"></li>
+							<li class="item_2"></li>
+							<li class="item_3"></li>
+							<li class="item_4"></li>
+							<li class="item_5"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item  active">
+								<img src="img/snow-mountain.jpg" alt="Snow-Mountain" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Snow Mountain</h3>
+									<p>The mountains were covered with a rug of trees, green, yellow, scarlet and orange, but their bare tops were scarfed and beribboned with snow. From carved rocky outcrops, waterfalls drifted like skeins of white lawn, and in the fields we could see the amber glint of rivers and the occasional mirror-like flash of a mountain lake...</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/trees.jpg" alt="Trees" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Trees</h3>
+									<p>In botany, a tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves in most species. In some usages, the definition of a tree may be narrower, including only woody plants with secondary growth, plants that are usable as lumber or plants above a specified height.</p>
+								</div>
+							</div>
+							
+							<div class="item">
+								<img src="img/aurora-borealis.jpg" alt="Aurora-Borealis" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Aurora Borealis</h3>
+									<p>An aurora, sometimes referred to as polar lights, northern lights, or southern lights, is a natural light display in the Earth's sky, predominantly seen in the high-latitude regions</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/forest.jpg" alt="Forest" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Forest</h3>
+									<p>A forest is a piece of land with many trees. Many animals need forests to live and survive. Forests are very important and grow in many places around the world. They are an ecosystem which includes many plants and animals. Temperature and rainfall are the two most important things for forests.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/railway-track.jpg" alt="Railway-Track" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Railway-Track</h3>
+									<p>A railway track or railway line is a set of two parallel rows of long pieces of steel. They are used by trains to transport people and things from one place to another.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel_3">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel_3">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<p><code>wrap</code></p>
+			<!-- Specifies whether the carousel should go through all slides continuously, or stop at the last slide -->
+			<!--
+			true - cycle continuously
+			false - stop at the last item
+			-->
+			<p>The <code>wrap</code> option specifies whether the carousel should go through all slides continuously, or stop at the last slide.</p>
+			<p>In this example, we have set wrap to "false", which will stop the carousel from sliding when the last item is shown.</p>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="myCarousel_4" class="carousel slide">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li class="item_1"></li>
+							<li class="item_2"></li>
+							<li class="item_3 active"></li>
+							<li class="item_4"></li>
+							<li class="item_5"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item">
+								<img src="img/snow-mountain.jpg" alt="Snow-Mountain" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Snow Mountain</h3>
+									<p>The mountains were covered with a rug of trees, green, yellow, scarlet and orange, but their bare tops were scarfed and beribboned with snow. From carved rocky outcrops, waterfalls drifted like skeins of white lawn, and in the fields we could see the amber glint of rivers and the occasional mirror-like flash of a mountain lake...</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/trees.jpg" alt="Trees" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Trees</h3>
+									<p>In botany, a tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves in most species. In some usages, the definition of a tree may be narrower, including only woody plants with secondary growth, plants that are usable as lumber or plants above a specified height.</p>
+								</div>
+							</div>
+							
+							<div class="item active">
+								<img src="img/aurora-borealis.jpg" alt="Aurora-Borealis" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Aurora Borealis</h3>
+									<p>An aurora, sometimes referred to as polar lights, northern lights, or southern lights, is a natural light display in the Earth's sky, predominantly seen in the high-latitude regions</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/forest.jpg" alt="Forest" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Forest</h3>
+									<p>A forest is a piece of land with many trees. Many animals need forests to live and survive. Forests are very important and grow in many places around the world. They are an ecosystem which includes many plants and animals. Temperature and rainfall are the two most important things for forests.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/railway-track.jpg" alt="Railway-Track" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Railway-Track</h3>
+									<p>A railway track or railway line is a set of two parallel rows of long pieces of steel. They are used by trains to transport people and things from one place to another.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel_4">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel_4">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Carousel Methods</h2>
+		<div class="container">
+			<p><code>.carousel(options)</code></p>
+			<!-- Activates the carousel with an option.  -->
+			<p>The <code>interval</code> option specifies the delay (in milliseconds) between each slide.</p>
+			<p>In this example, we have set the interval to "500" (default is 5000).</p>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="myCarousel_5" class="carousel slide">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li class="item_1"></li>
+							<li class="item_2 active"></li>
+							<li class="item_3"></li>
+							<li class="item_4"></li>
+							<li class="item_5"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item">
+								<img src="img/snow-mountain.jpg" alt="Snow-Mountain" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Snow Mountain</h3>
+									<p>The mountains were covered with a rug of trees, green, yellow, scarlet and orange, but their bare tops were scarfed and beribboned with snow. From carved rocky outcrops, waterfalls drifted like skeins of white lawn, and in the fields we could see the amber glint of rivers and the occasional mirror-like flash of a mountain lake...</p>
+								</div>
+							</div>
+							<div class="item active">
+								<img src="img/trees.jpg" alt="Trees" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Trees</h3>
+									<p>In botany, a tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves in most species. In some usages, the definition of a tree may be narrower, including only woody plants with secondary growth, plants that are usable as lumber or plants above a specified height.</p>
+								</div>
+							</div>
+							
+							<div class="item">
+								<img src="img/aurora-borealis.jpg" alt="Aurora-Borealis" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Aurora Borealis</h3>
+									<p>An aurora, sometimes referred to as polar lights, northern lights, or southern lights, is a natural light display in the Earth's sky, predominantly seen in the high-latitude regions</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/forest.jpg" alt="Forest" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Forest</h3>
+									<p>A forest is a piece of land with many trees. Many animals need forests to live and survive. Forests are very important and grow in many places around the world. They are an ecosystem which includes many plants and animals. Temperature and rainfall are the two most important things for forests.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/railway-track.jpg" alt="Railway-Track" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Railway-Track</h3>
+									<p>A railway track or railway line is a set of two parallel rows of long pieces of steel. They are used by trains to transport people and things from one place to another.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel_5" role="button">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel_5" role="button">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<p><code>.carousel("cycle")</code></p>
+			<!-- Goes through the carousel items from left to right -->
+			<p>The <code>cycle</code> method goes through the carousel items from left to right (slides automatically).</p>
+			<p><code>.carousel("pause")</code></p>
+			<!-- Stops the carousel from going through items -->
+			<p>The <code>pause</code> method stops the carousel from going through items.</p>
+			<button type="button" id="btn_1" class="btn btn-success">Slide through items (cycle)</button>
+			<button type="button" id="btn_2" class="btn btn-danger">Stop slide (pause)</button><br><br>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="myCarousel_6" class="carousel slide">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li class="item_1"></li>
+							<li class="item_2"></li>
+							<li class="item_3"></li>
+							<li class="item_4  active"></li>
+							<li class="item_5"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item">
+								<img src="img/snow-mountain.jpg" alt="Snow-Mountain" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Snow Mountain</h3>
+									<p>The mountains were covered with a rug of trees, green, yellow, scarlet and orange, but their bare tops were scarfed and beribboned with snow. From carved rocky outcrops, waterfalls drifted like skeins of white lawn, and in the fields we could see the amber glint of rivers and the occasional mirror-like flash of a mountain lake...</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/trees.jpg" alt="Trees" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Trees</h3>
+									<p>In botany, a tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves in most species. In some usages, the definition of a tree may be narrower, including only woody plants with secondary growth, plants that are usable as lumber or plants above a specified height.</p>
+								</div>
+							</div>
+							
+							<div class="item">
+								<img src="img/aurora-borealis.jpg" alt="Aurora-Borealis" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Aurora Borealis</h3>
+									<p>An aurora, sometimes referred to as polar lights, northern lights, or southern lights, is a natural light display in the Earth's sky, predominantly seen in the high-latitude regions</p>
+								</div>
+							</div>
+							<div class="item active">
+								<img src="img/forest.jpg" alt="Forest" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Forest</h3>
+									<p>A forest is a piece of land with many trees. Many animals need forests to live and survive. Forests are very important and grow in many places around the world. They are an ecosystem which includes many plants and animals. Temperature and rainfall are the two most important things for forests.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/railway-track.jpg" alt="Railway-Track" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Railway-Track</h3>
+									<p>A railway track or railway line is a set of two parallel rows of long pieces of steel. They are used by trains to transport people and things from one place to another.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel_6" role="button">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel_6" role="button">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<p><code>.carousel(number)</code></p>
+			<!-- Goes to a specified item (zero-based: first item is 0, second item is 1, etc..) -->
+			<p>The <code>number</code> method goes to a specified item in the carousel (zero-based: first item is 0, second item is 1, etc..).</p>
+			<button type="button" id="num_1" class="btn btn-success">Go to Item 1</button>
+			<button type="button" id="num_2" class="btn btn-success">Go to Item 2</button>
+			<button type="button" id="num_3" class="btn btn-success">Go to Item 3</button>
+			<button type="button" id="num_4" class="btn btn-success">Go to Item 4</button>
+			<button type="button" id="num_5" class="btn btn-success">Go to Item 5</button>
+			<br><br>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="myCarousel_7" class="carousel slide">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li class="item_1"></li>
+							<li class="item_2  active"></li>
+							<li class="item_3"></li>
+							<li class="item_4"></li>
+							<li class="item_5"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item">
+								<img src="img/snow-mountain.jpg" alt="Snow-Mountain" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Snow Mountain</h3>
+									<p>The mountains were covered with a rug of trees, green, yellow, scarlet and orange, but their bare tops were scarfed and beribboned with snow. From carved rocky outcrops, waterfalls drifted like skeins of white lawn, and in the fields we could see the amber glint of rivers and the occasional mirror-like flash of a mountain lake...</p>
+								</div>
+							</div>
+							<div class="item active">
+								<img src="img/trees.jpg" alt="Trees" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Trees</h3>
+									<p>In botany, a tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves in most species. In some usages, the definition of a tree may be narrower, including only woody plants with secondary growth, plants that are usable as lumber or plants above a specified height.</p>
+								</div>
+							</div>
+							
+							<div class="item">
+								<img src="img/aurora-borealis.jpg" alt="Aurora-Borealis" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Aurora Borealis</h3>
+									<p>An aurora, sometimes referred to as polar lights, northern lights, or southern lights, is a natural light display in the Earth's sky, predominantly seen in the high-latitude regions</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/forest.jpg" alt="Forest" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Forest</h3>
+									<p>A forest is a piece of land with many trees. Many animals need forests to live and survive. Forests are very important and grow in many places around the world. They are an ecosystem which includes many plants and animals. Temperature and rainfall are the two most important things for forests.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/railway-track.jpg" alt="Railway-Track" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Railway-Track</h3>
+									<p>A railway track or railway line is a set of two parallel rows of long pieces of steel. They are used by trains to transport people and things from one place to another.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel_7" role="button">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel_7" role="button">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<p><code>.carousel("prev")</code></p>
+			<!-- Goes to the previous item -->
+			<p>The <code>prev</code> method goes to the previous item.</p>
+			<p><code>.carousel("next")</code></p>
+			<!-- Goes to the next item -->
+			<p>The <code>next</code> method goes to the next item.</p>
+			<button type="button" id="prev-btn" class="btn btn-warning">Previous Item</button>
+			<button type="button" id="next-btn" class="btn btn-info">Next Item</button><br><br>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="myCarousel_8" class="carousel slide">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li class="item_1"></li>
+							<li class="item_2"></li>
+							<li class="item_3"></li>
+							<li class="item_4  active"></li>
+							<li class="item_5"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item">
+								<img src="img/snow-mountain.jpg" alt="Snow-Mountain" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Snow Mountain</h3>
+									<p>The mountains were covered with a rug of trees, green, yellow, scarlet and orange, but their bare tops were scarfed and beribboned with snow. From carved rocky outcrops, waterfalls drifted like skeins of white lawn, and in the fields we could see the amber glint of rivers and the occasional mirror-like flash of a mountain lake...</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/trees.jpg" alt="Trees" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Trees</h3>
+									<p>In botany, a tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves in most species. In some usages, the definition of a tree may be narrower, including only woody plants with secondary growth, plants that are usable as lumber or plants above a specified height.</p>
+								</div>
+							</div>
+							
+							<div class="item">
+								<img src="img/aurora-borealis.jpg" alt="Aurora-Borealis" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Aurora Borealis</h3>
+									<p>An aurora, sometimes referred to as polar lights, northern lights, or southern lights, is a natural light display in the Earth's sky, predominantly seen in the high-latitude regions</p>
+								</div>
+							</div>
+							<div class="item active">
+								<img src="img/forest.jpg" alt="Forest" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Forest</h3>
+									<p>A forest is a piece of land with many trees. Many animals need forests to live and survive. Forests are very important and grow in many places around the world. They are an ecosystem which includes many plants and animals. Temperature and rainfall are the two most important things for forests.</p>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/railway-track.jpg" alt="Railway-Track" width="100%" height="500px">
+								<div class="carousel-caption">
+									<h3>Railway-Track</h3>
+									<p>A railway track or railway line is a set of two parallel rows of long pieces of steel. They are used by trains to transport people and things from one place to another.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel_8" role="button">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel_8" role="button">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+		<script>
+		$(document).ready(function(){
+			/*Activate Carousel with JavaScript*/
+			// Activate Carousel
+			$("#myCarousel_1").carousel();
+		
+			// Enable Carousel Indicators
+			$("#myCarousel_1 .item_1").click(function(){
+				$("#myCarousel_1").carousel(0);
+			});
+			$("#myCarousel_1 .item_2").click(function(){
+				$("#myCarousel_1").carousel(1);
+			});
+			$("#myCarousel_1 .item_3").click(function(){
+				$("#myCarousel_1").carousel(2);
+			});
+			$("#myCarousel_1 .item_4").click(function(){
+				$("#myCarousel_1").carousel(3);
+			});
+			$("#myCarousel_1 .item_5").click(function(){
+				$("#myCarousel_1").carousel(4);
+			});
+		
+			// Enable Carousel Controls
+			$("#myCarousel_1 .left").click(function(){
+				$("#myCarousel_1").carousel("prev");
+			});
+			$("#myCarousel_1 .right").click(function(){
+				$("#myCarousel_1").carousel("next");
+			});
+			/*interval*/
+			$("#myCarousel_2").carousel({
+				interval: 500
+				/*interval: false*/
+			});
+		
+			// Enable Carousel Indicators
+			$("#myCarousel_2 .item_1").click(function(){
+				$("#myCarousel_2").carousel(0);
+			});
+			$("#myCarousel_2 .item_2").click(function(){
+				$("#myCarousel_2").carousel(1);
+			});
+			$("#myCarousel_2 .item_3").click(function(){
+				$("#myCarousel_2").carousel(2);
+			});
+			$("#myCarousel_2 .item_4").click(function(){
+				$("#myCarousel_2").carousel(3);
+			});
+			$("#myCarousel_2 .item_5").click(function(){
+				$("#myCarousel_2").carousel(4);
+			});
+		
+			// Enable Carousel Controls
+			$("#myCarousel_2 .left").click(function(){
+				$("#myCarousel_2").carousel("prev");
+			});
+			$("#myCarousel_2 .right").click(function(){
+				$("#myCarousel_2").carousel("next");
+			});
+			/*pause*/
+			$("#myCarousel_3").carousel({
+				interval: 500,
+				pause: "hover"
+				/*pause: false*/
+			});
+		
+			// Enable Carousel Indicators
+			$("#myCarousel_3 .item_1").click(function(){
+				$("#myCarousel_3").carousel(0);
+			});
+			$("#myCarousel_3 .item_2").click(function(){
+				$("#myCarousel_3").carousel(1);
+			});
+			$("#myCarousel_3 .item_3").click(function(){
+				$("#myCarousel_3").carousel(2);
+			});
+			$("#myCarousel_3 .item_4").click(function(){
+				$("#myCarousel_3").carousel(3);
+			});
+			$("#myCarousel_3 .item_5").click(function(){
+				$("#myCarousel_3").carousel(4);
+			});
+		
+			// Enable Carousel Controls
+			$("#myCarousel_3 .left").click(function(){
+				$("#myCarousel_3").carousel("prev");
+			});
+			$("#myCarousel_3 .right").click(function(){
+				$("#myCarousel_3").carousel("next");
+			});
+			/*wrap*/
+			$("#myCarousel_4").carousel({
+				interval: 500,
+				wrap: false
+				/*wrap: true*/
+			});
+		
+			// Enable Carousel Indicators
+			$("#myCarousel_4 .item_1").click(function(){
+				$("#myCarousel_4").carousel(0);
+			});
+			$("#myCarousel_4 .item_2").click(function(){
+				$("#myCarousel_4").carousel(1);
+			});
+			$("#myCarousel_4 .item_3").click(function(){
+				$("#myCarousel_4").carousel(2);
+			});
+			$("#myCarousel_4 .item_4").click(function(){
+				$("#myCarousel_4").carousel(3);
+			});
+			$("#myCarousel_4 .item_5").click(function(){
+				$("#myCarousel_4").carousel(4);
+			});
+		
+			// Enable Carousel Controls
+			$("#myCarousel_4 .left").click(function(){
+				$("#myCarousel_4").carousel("prev");
+			});
+			$("#myCarousel_4 .right").click(function(){
+				$("#myCarousel_4").carousel("next");
+			});
+			/*.carousel(options)*/
+			// Activate Carousel
+			$("#myCarousel_5").carousel(
+				{
+					interval:500
+				});
+		
+			// Enable Carousel Indicators
+			$("#myCarousel_5 .item_1").click(function(){
+				$("#myCarousel_5").carousel(0);
+			});
+			$("#myCarousel_5 .item_2").click(function(){
+				$("#myCarousel_5").carousel(1);
+			});
+			$("#myCarousel_5 .item_3").click(function(){
+				$("#myCarousel_5").carousel(2);
+			});
+			$("#myCarousel_5 .item_4").click(function(){
+				$("#myCarousel_5").carousel(3);
+			});
+			$("#myCarousel_5 .item_5").click(function(){
+				$("#myCarousel_5").carousel(4);
+			});
+		
+			// Enable Carousel Controls
+			$("#myCarousel_5 .left").click(function(){
+				$("#myCarousel_5").carousel("prev");
+			});
+			$("#myCarousel_5 .right").click(function(){
+				$("#myCarousel_5").carousel("next");
+			});
+			/*.carousel("cycle") and .carousel("pause")*/
+			// Activate Carousel and set to stop/pause
+			$("#myCarousel_6").carousel("pause");
+			
+			// Click on the button to start sliding
+			$("#btn_1").click(function(){
+			$("#myCarousel_6").carousel("cycle");
+			});
+			// Click on the button to stop sliding
+			$("#btn2").click(function(){
+			$("#myCarousel_6").carousel("pause");
+			});
+			// Enable Carousel Indicators
+			$("#myCarousel_6 .item_1").click(function(){
+				$("#myCarousel_6").carousel(0);
+			});
+			$("#myCarousel_6 .item_2").click(function(){
+				$("#myCarousel_6").carousel(1);
+			});
+			$("#myCarousel_6 .item_3").click(function(){
+				$("#myCarousel_6").carousel(2);
+			});
+			$("#myCarousel_6 .item_4").click(function(){
+				$("#myCarousel_6").carousel(3);
+			});
+			$("#myCarousel_6 .item_5").click(function(){
+				$("#myCarousel_6").carousel(4);
+			});
+		
+			// Enable Carousel Controls
+			$("#myCarousel_6 .left").click(function(){
+				$("#myCarousel_6").carousel("prev");
+			});
+			$("#myCarousel_6 .right").click(function(){
+				$("#myCarousel_6").carousel("next");
+			});
+			/*.carousel(number)*/
+			// Activate Carousel and set to stop/pause
+			$("#myCarousel_7").carousel("pause");
+			
+			// On 1st button click go to item 1
+			$("#num_1").click(function(){
+			$("#myCarousel_7").carousel(0);
+			});
+			// On 2nd button click go to item 2
+			$("#num_2").click(function(){
+			$("#myCarousel_7").carousel(1);
+			});
+			// On 3rd button click go to item 3
+			$("#num_3").click(function(){
+			$("#myCarousel_7").carousel(2);
+			});
+			// On 4th button click go to item 4
+			$("#num_4").click(function(){
+			$("#myCarousel_7").carousel(3);
+			});
+			// On 5th button click go to item 5
+			$("#num_5").click(function(){
+			$("#myCarousel_7").carousel(4);
+			});
+			// Enable Carousel Indicators
+			$("#myCarousel_7 .item_1").click(function(){
+				$("#myCarousel_7").carousel(0);
+			});
+			$("#myCarousel_7 .item_2").click(function(){
+				$("#myCarousel_7").carousel(1);
+			});
+			$("#myCarousel_7 .item_3").click(function(){
+				$("#myCarousel_7").carousel(2);
+			});
+			$("#myCarousel_7 .item_4").click(function(){
+				$("#myCarousel_7").carousel(3);
+			});
+			$("#myCarousel_7 .item_5").click(function(){
+				$("#myCarousel_7").carousel(4);
+			});
+		
+			// Enable Carousel Controls
+			$("#myCarousel_7 .left").click(function(){
+				$("#myCarousel_7").carousel("prev");
+			});
+			$("#myCarousel_7 .right").click(function(){
+				$("#myCarousel_7").carousel("next");
+			});
+			/*.carousel("prev") and .carousel("next")*/
+			// Activate Carousel and set to stop/pause
+			$("#myCarousel_8").carousel("pause");
+			
+			// on button click go to previous item
+			$("#prev-btn").click(function(){
+			$("#myCarousel_8").carousel("prev");
+			});
+			//on button click go to next item
+			$("#next-btn").click(function(){
+			$("#myCarousel_8").carousel("next");
+			});
+			// Enable Carousel Indicators
+			$("#myCarousel_8 .item_1").click(function(){
+				$("#myCarousel_8").carousel(0);
+			});
+			$("#myCarousel_8 .item_2").click(function(){
+				$("#myCarousel_8").carousel(1);
+			});
+			$("#myCarousel_8 .item_3").click(function(){
+				$("#myCarousel_8").carousel(2);
+			});
+			$("#myCarousel_8 .item_4").click(function(){
+				$("#myCarousel_8").carousel(3);
+			});
+			$("#myCarousel_8 .item_5").click(function(){
+				$("#myCarousel_8").carousel(4);
+			});
+		
+			// Enable Carousel Controls
+			$("#myCarousel_8 .left").click(function(){
+				$("#myCarousel_8").carousel("prev");
+			});
+			$("#myCarousel_8 .right").click(function(){
+				$("#myCarousel_8").carousel("next");
+			});
+		});
+		</script>
+	</body>
+</html>

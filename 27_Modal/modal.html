@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Modal</title>
+		<link rel="icon" href="icon/bootstrap.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Basic Modal Example</h2>
+		<!-- The Modal plugin is a dialog box/popup window that is displayed on top of the current page -->
+		<div class="container">
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal_1">Open Modal</button>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_1" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Modal Header</h4>
+						</div>
+						<div class="modal-body">
+							<p>Some text in the modal.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Modal Size</h2>
+		<p>Change the size of the modal by adding the <code>.modal-sm</code> class for small modals or  <code>.modal-lg</code> class for large modals.</p>
+		<p>Add the size class to the &lt;div&gt; element with class <code>.modal-dialog</code></p>
+		<div class="container">
+			<h2>Small Modal</h2>
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal_2">Open Small Modal</button>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_2" role="dialog">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Modal Header</h4>
+						</div>
+						<div class="modal-body">
+							<p>This is a small modal.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Default Modal</h2>
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal_3">Open Default Modal</button>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_3" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Modal Header</h4>
+						</div>
+						<div class="modal-body">
+							<p>This is a Default modal.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Large Modal</h2>
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal_4">Open Large Modal</button>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_4" role="dialog">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Modal Header</h4>
+						</div>
+						<div class="modal-body">
+							<p>This is a large modal.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Modal Options</h2>
+		<div class="container">
+			<p><code>data-backdrop</code></p>
+			<!--
+			Specifies whether the modal should have a dark overlay:
+				true - dark overlay
+				false - no overlay (transparent)
+			If you specify the value "static", it is not possible to close the modal when clicking outside of it -->
+			<p>The <code>data-backdrop</code> attribute specifies whether the modal should have a dark overlay (the background color of the current page) or not.</p>
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal_5" data-backdrop="true">Modal with Overlay (true)</button>
+			<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal_6" data-backdrop="false">Modal without Overlay (false)</button>
+			<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal_7" data-backdrop="static">Modal with static backdrop</button>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_5" role="dialog">
+				<div class="modal-dialog">
+					
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Modal with Dark Overlay</h4>
+						</div>
+						<div class="modal-body">
+							<p>This modal has a dark overlay.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_6" role="dialog">
+				<div class="modal-dialog">
+					
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">×</button>
+							<h4 class="modal-title">Modal without Overlay</h4>
+						</div>
+						<div class="modal-body">
+							<p>This modal has no overlay.</p>
+							<p><strong>Note:</strong> You cannot click outside of this modal to close it.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_7" role="dialog">
+				<div class="modal-dialog">
+					
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">×</button>
+							<h4 class="modal-title">Static Backdrop</h4>
+						</div>
+						<div class="modal-body">
+							<p>You cannot click outside of this modal to close it.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<p><code>data-keyboard</code></p>
+			<!--
+			Specifies whether the modal can be closed with the escape key (Esc):
+				true - the modal can be closed with Esc
+			false - the modal cannot be closed with Esc -->
+			<p>The <code>data-keyboard</code> attribute specifies whether the modal can be closed with the escape key.</p>
+			<p><strong>Note:</strong> Press the <kbd>Tab</kbd> key on your keyboard to <kbd>enter</kbd> the modal window and then press the <kbd>Esc</kbd> key.</p>
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal_8" data-keyboard="true">Modal (data-keyboard="true")</button>
+			<button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal_9" data-keyboard="false">Modal (data-keyboard="false")</button>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_8" role="dialog">
+				<div class="modal-dialog">
+					
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Modal Options</h4>
+						</div>
+						<div class="modal-body">
+							<p>This modal can be closed with the escape key on your keyboard.</p>
+							<p><strong>Note:</strong> You need to press the tab key on the keyboard to first enter the modal window, and then press the Esc key.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_9" role="dialog">
+				<div class="modal-dialog">
+					
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">×</button>
+							<h4 class="modal-title">Modal Options</h4>
+						</div>
+						<div class="modal-body">
+							<p>This modal cannot be closed with the escape key on your keyboard.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<p><code>data-show</code></p>
+			<p>The <code>data-show</code> attribute specifies whether the modal should be shown upon initialization.</p>
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal_10" data-show="true">Modal (data-show="true")</button>
+			<button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal_11" data-show="false">Modal (data-show="false")</button><!-- not working -->
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_10" role="dialog">
+				<div class="modal-dialog">
+					
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Modal Options</h4>
+						</div>
+						<div class="modal-body">
+							<p>Modal content..</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_11" role="dialog">
+				<div class="modal-dialog">
+					
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">×</button>
+							<h4 class="modal-title">Modal Options</h4>
+						</div>
+						<div class="modal-body">
+							<p>Modal content..</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Modal Login Example</h2>
+		<div class="container">
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal_12">Login</button>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal_12" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4> Login</h4>
+						</div>
+						<div class="modal-body">
+							<form role="form">
+								<div class="form-group">
+									<label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+									<input type="text" class="form-control" id="usrname" placeholder="Enter email">
+								</div>
+								<div class="form-group">
+									<label for="psw"><span class="glyphicon glyphicon-lock"></span> Password</label>
+									<input type="text" class="form-control" id="psw" placeholder="Enter password">
+								</div>
+								<div class="checkbox">
+									<label><input type="checkbox" value="" checked>Remember me</label>
+								</div>
+								<button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+	</body>
+</html>

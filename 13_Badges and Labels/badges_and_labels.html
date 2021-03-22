@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Badges and Labels</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="icon/bootstrap.png">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+			.hr-gray{
+				border-top: 1px solid gray;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Badges</h2>
+		<!-- Badges are numerical indicators of how many items are associated with a link -->
+		<p>Use the <code>.badge</code> class within &lt;span&gt; elements to create badges</p>
+		<div class="container">
+			<a href="#">News <span class="badge">5</span></a><br>
+			<a href="#">Comments <span class="badge">10</span></a><br>
+			<a href="#">Updates <span class="badge">2</span></a>
+		</div>
+		<hr>
+		<h2>Badges on Buttons</h2>
+		<!-- Badges can also be used inside other elements, such as buttons -->
+		<div class="container">
+			<button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>
+			<button type="button" class="btn btn-success">Success <span class="badge">3</span></button>
+			<button type="button" class="btn btn-danger">Danger <span class="badge">5</span></button>
+		</div>
+		<hr>
+		<h2>Labels</h2>
+		<!-- Labels are used to provide additional information about something -->
+		<p>Use the <code>.label</code> class,  followed by one of the six contextual classes <code>.label-default, .label-primary, .label-success, .label-info, .label-warning and .label-danger</code>, within a <span> element to create a label</p>
+		<div class="container">
+			<h1>Example <span class="label label-default">New</span></h1>
+			<h2>Example <span class="label label-default">New</span></h2>
+			<h3>Example <span class="label label-default">New</span></h3>
+			<h4>Example <span class="label label-default">New</span></h4>
+			<h5>Example <span class="label label-default">New</span></h5>
+			<h6>Example <span class="label label-default">New</span></h6>
+		</div>
+		<hr>
+		<h2>Contextual Label Classes</h2>
+		<div class="container">
+			<p>Contextual classes can be used to color the label.</p>
+			<span class="label label-default">Default Label</span>
+			<span class="label label-primary">Primary Label</span>
+			<span class="label label-success">Success Label</span>
+			<span class="label label-info">Info Label</span>
+			<span class="label label-warning">Warning Label</span>
+			<span class="label label-danger">Danger Label</span>
+			<hr>
+			<div class="well">
+				<h1>Courses</h1>
+				<hr class="hr-gray">
+				<h2>C <span class="label label-primary">Beginner</span></h2>
+				<h3>C++ <span class="label label-info">Beginner</span></h3>
+				<h4>Java <span class="label label-success">Intermediate</span></h4>
+				<h5>Spring <span class="label label-danger">Advanced</span></h5>
+				<h6>Bootstrap <span class="label label-warning">New</span></h6>
+			</div>
+		</div>
+		<br><br>
+	</body>
+</html>

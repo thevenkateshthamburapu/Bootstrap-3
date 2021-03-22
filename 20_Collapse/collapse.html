@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Collapse</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="icon/bootstrap.png">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+			/* Icon when the collapsible content is shown */
+			#Expand_Collapse .btn:after {
+				font-family: "Glyphicons Halflings";
+				content: "\e114";
+				float: right;
+				margin-left: 15px;
+			}
+			/* Icon when the collapsible content is hidden */
+			#Expand_Collapse .btn.collapsed:after {
+				content: "\e080";
+			}
+			.thumbnail img{
+				height: 200px;
+				}
+			#collapsing_demo .collapsing {
+    			background-color: gray;
+  			}
+		</style>
+	</head>
+	<body>
+		<!-- Collapsibles are useful when you want to hide and show large amount of content -->
+		<h2>Simple Collapsible</h2>
+		<div class="container">
+			<p>Button:</p>
+			<p>Click on the button to toggle between showing and hiding content.</p>
+			<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1">Simple collapsible</button>
+			<div id="demo1" class="collapse">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+			<hr>
+		</div>
+		<!--
+		The .collapse class indicates a collapsible element (a <div> in our example); this is the content that will be shown or hidden with a click of a button.
+		To control (show/hide) the collapsible content, add the data-toggle="collapse" attribute to an <a> or a <button> element. Then add the data-target="#id" attribute to connect the button with the collapsible content (<div id="demo">).
+		For <a> elements, you can use the href attribute instead of the data-target attribute
+					-->
+		<div class="container">
+			<p>Anchor Tag:</p>
+			<a href="#demo2" class="btn btn-info" data-toggle="collapse">Simple collapsible</a>
+			<div id="demo2" class="collapse">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<p>By defaullt open/show content <code>.collapse .in</code></p>
+			<a href="#default" class="btn btn-info" data-toggle="collapse">Simple collapsible</a>
+			<div id="default" class="collapse in">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+			<hr>
+		</div>
+		<div id="collapsing_demo" class="container">
+			<p><code>.collapsing</code></p>
+			<a href="#collapse_demo" class="btn btn-info" data-toggle="collapse">Simple collapsible</a>
+			<div id="collapse_demo" class="collapse">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+		</div>
+		<!-- 
+		.collapse	Hides the content	
+		.collapse in	Shows the content	
+		.collapsing	Added when the transition starts, and removed when it finishes -->
+		<hr>
+		<h2>Collapsible Panel</h2>
+		<div class="container">
+			<p>Click on the collapsible panel to open and close it.</p>
+			<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+						<a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+						</h4>
+					</div>
+					<div id="collapse1" class="panel-collapse collapse">
+						<div class="panel-body">Panel Body</div>
+						<div class="panel-footer">Panel Footer</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Collapsible List Group</h2>
+		<div class="container">
+			<p>Click on the collapsible panel to open and close it.</p>
+			<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+						<a data-toggle="collapse" href="#collapse2">Collapsible list group</a>
+						</h4>
+					</div>
+					<div id="collapse2" class="panel-collapse collapse">
+						<ul class="list-group">
+							<li class="list-group-item">One</li>
+							<li class="list-group-item">Two</li>
+							<li class="list-group-item">Three</li>
+						</ul>
+						<div class="panel-footer">Footer</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Expand and Collapse Toggle Icon & Text</h2>
+		<div class="container" id="Expand_Collapse">
+			<button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse" data-target="#demo3">Simple collapsible</button>
+			<div id="demo3" class="collapse">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+		</div>
+		<hr>
+		<h2>Toggle Image Gallery</h2>
+		<div class="container">
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a class="btn btn-primary" data-toggle="collapse" href="#imageGallery">
+										Toggle Image
+									</a>
+					</div>
+					<div class="panel-body collapse" id="imageGallery">
+						<div class="col-xs-4">
+							<a href="img/bicycle.jpg" class="thumbnail" target="_bank">
+								<p>Bicycle</p>
+								<img src="img/bicycle.jpg"  />
+							</a>
+						</div>
+						<div class="col-xs-4">
+							<a href="img/iphone.jpg" class="thumbnail" target="_bank">
+								<p>IPhone</p>
+								<img src="img/iphone.jpg" />
+							</a>
+						</div>
+						<div class="col-xs-4">
+							<a href="img/ocean.jpg" class="thumbnail" target="_bank">
+								<p>Ocean</p>
+								<img src="img/ocean.jpg"/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="height: 350px"></div>
+	</body>
+</html>

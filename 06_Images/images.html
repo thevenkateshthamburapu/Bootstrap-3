@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Images</title>
+		<link rel="icon" href="icon/bootstrap.png">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+			.thumbnail a > img{
+				height: 200px;
+				}
+		</style>
+	</head>
+	<body>
+		<hr>
+		<h1>Image Shapes</h1>
+		<div class="container">
+			<h2>Rounded Corners</h2>
+			<p>The <code>.img-rounded</code> class adds rounded corners to an image (not available in IE8):</p>
+			<img src="img/bicycle.jpg" class="img-rounded" alt="Bicycle" width="200" height="236">
+			<hr>
+			<h2>Circle</h2>
+			<p>The <code>.img-circle</code> class shapes the image to a circle (not available in IE8):</p>
+			<img src="img/iphone.jpg" class="img-circle" alt="IPhone" width="250" height="236">
+			<hr>
+			<h2>Thumbnail</h2>
+			<p>The <code>.img-thumbnail</code> class creates a thumbnail of the image:</p>
+			<img src="img/ocean.jpg" class="img-thumbnail" alt="Ocean" width="304" height="236">
+		</div>
+		<hr>
+		<h1>Responsive Images</h1>
+		<!-- Images come in all sizes. So do screens. Responsive images automatically adjust to fit the size of the screen.
+		Create responsive images by adding an .img-responsive class to the <img> tag. The image will then scale nicely to the parent element.
+		The .img-responsive class applies display: block; and max-width: 100%; and height: auto; to the image: -->
+		<div class="container">
+			<h2>Image</h2>
+			<p>The .img-responsive class makes the image scale nicely to the parent element (resize the browser window to see the effect):</p>
+			<img class="img-responsive" src="img/street.jpg" alt="Street" width="460" height="345">
+		</div>
+		<hr>
+		<h1>Image Gallery</h1>
+		<p>The <code>.thumbnail</code> class can be used to display an image gallery.</p>
+		<p>Click on the images to enlarge them.</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<div class="thumbnail">
+						<a href="img/bicycle.jpg" target="_blank">
+							<p class="text-center">Bicycle</p>
+							<img src="img/bicycle.jpg" />
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<div class="thumbnail">
+						<a href="img/iphone.jpg" target="_blank">
+							<p class="text-center">IPhone</p>
+							<img src="img/iphone.jpg" />
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<div class="thumbnail">
+						<a href="img/ocean.jpg" target="_blank">
+							<p class="text-center">Ocean</p>
+							<img src="img/ocean.jpg" />
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<div class="thumbnail">
+						<a href="img/street.jpg" target="_blank">
+							<p class="text-center">Street</p>
+							<img src="img/street.jpg"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+	</body>
+</html>

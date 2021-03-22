@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>JS Tab</title>
+		<link rel="icon" href="icon/bootstrap.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+			
+		</style>
+	</head>
+	<body>
+		<h2>Tab Methods</h2>
+		<p>Dynamic Tabs(Via JavaScript)</p>
+		<div class="container" id="dynamic_tabs">
+			<h2>Dynamic Tabs</h2>
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#dynamic_tabs_home">Home</a></li>
+				<li><a href="#dynamic_tabs_menu1">Menu 1</a></li>
+				<li><a href="#dynamic_tabs_menu2">Menu 2</a></li>
+				<li><a href="#dynamic_tabs_menu3">Menu 3</a></li>
+			</ul>
+			<div class="tab-content">
+				<div id="dynamic_tabs_home" class="tab-pane fade in active">
+					<h3>HOME</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div id="dynamic_tabs_menu1" class="tab-pane fade">
+					<h3>Menu 1</h3>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div id="dynamic_tabs_menu2" class="tab-pane fade">
+					<h3>Menu 2</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+				</div>
+				<div id="dynamic_tabs_menu3" class="tab-pane fade">
+					<h3>Menu 3</h3>
+					<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Tab Events</h2>
+		<div class="container" id="tab_events">
+			<h2>Dynamic Tabs</h2>
+			<p>The <code>show.bs.tab</code> event occurs when the tab is about to be shown.</p>
+			<p>The <code>shown.bs.tab</code> event occurs when the tab is fully shown.</p>
+			<p>The <code>hide.bs.tab</code> event occurs when the tab is about to be hidden.</p>
+			<p>The <code>hidden.bs.tab</code> event occurs when the tab is fully hidden.</p>
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#tab_events_home">Home</a></li>
+				<li><a href="#tab_events_menu1">Menu 1</a></li>
+				<li><a href="#tab_events_menu2">Menu 2</a></li>
+				<li><a href="#tab_events_menu3">Menu 3</a></li>
+			</ul>
+			<div class="tab-content">
+				<div id="tab_events_home" class="tab-pane fade in active">
+					<h3>HOME</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div id="tab_events_menu1" class="tab-pane fade">
+					<h3>Menu 1</h3>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div id="tab_events_menu2" class="tab-pane fade">
+					<h3>Menu 2</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+				</div>
+				<div id="tab_events_menu3" class="tab-pane fade">
+					<h3>Menu 3</h3>
+					<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Active and Previous Tabs names</h2>
+		<div class="container" id="tab_names">
+			<h2>Dynamic Tabs with jQuery</h2>
+			<p>Click on the Tabs to display the active and previous tab.</p>
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#tab_names_home">Home</a></li>
+				<li><a href="#tab_names_menu1">Menu 1</a></li>
+				<li><a href="#tab_names_menu2">Menu 2</a></li>
+				<li><a href="#tab_names_menu3">Menu 3</a></li>
+			</ul>
+			<div class="tab-content">
+				<div id="tab_names_home" class="tab-pane fade in active">
+					<h3>HOME</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div id="tab_names_menu1" class="tab-pane fade">
+					<h3>Menu 1</h3>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div id="tab_names_menu2" class="tab-pane fade">
+					<h3>Menu 2</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+				</div>
+				<div id="tab_names_menu3" class="tab-pane fade">
+					<h3>Menu 3</h3>
+					<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				</div>
+			</div>
+			<hr>
+			<p class="act"><b>Active Tab</b>: <span></span></p>
+			<p class="prev"><b>Previous Tab</b>: <span></span></p>
+		</div><br><br>
+		<script>
+		$(document).ready(function(){
+			/*Tab Methods*/
+			$("#dynamic_tabs .nav-tabs a").click(function(){
+				$(this).tab('show');
+			});
+			/*Tab Events*/
+			$("#tab_events .nav-tabs a").click(function(){
+			$(this).tab('show');
+			});
+			$('#tab_events .nav-tabs a').on('show.bs.tab', function(){
+			alert('The new tab is about to be shown.');
+			});
+			$('#tab_events .nav-tabs a').on('shown.bs.tab', function(){
+			alert('The new tab is now fully shown.');
+			});
+			$('#tab_events .nav-tabs a').on('hide.bs.tab', function(e){
+				alert('The previous tab is about to be hidden.');
+			});
+			$('#tab_events .nav-tabs a').on('hidden.bs.tab', function(){
+				alert('The previous tab is now fully hidden.');
+			});
+			/* Active and Previous Tabs names*/
+			$("#tab_names .nav-tabs a").click(function(){
+    			$(this).tab('show');
+ 			 });
+  			$('#tab_names .nav-tabs a').on('shown.bs.tab', function(event){
+    			var x = $(event.target).text();         // active tab
+    			var y = $(event.relatedTarget).text();  // previous tab
+    			$("#tab_names .act span").text(x);
+    			$("#tab_names .prev span").text(y);
+  			});
+		});
+		</script>
+	</body>
+</html>

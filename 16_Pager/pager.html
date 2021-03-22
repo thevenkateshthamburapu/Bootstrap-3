@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Pager</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="icon/bootstrap.png">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+		</style>
+	</head>
+	<body>
+		<!--
+		What is Pager?
+		Pager is also a form of pagination (as described in the previous chapter).
+		Pager provides previous and next buttons (links). -->
+		<h2>Pager</h2>
+		<p>The <code>.pager</code> class provides previous and next buttons (links)</p>
+		<div class="container">
+			<ul class="pager">
+				<li><a href="#">Previous</a></li>
+				<li><a href="#">Next</a></li>
+			</ul>
+		</div>
+		<hr>
+		<h2>Pager Align Buttons</h2>
+		<p>The <code>.previous</code> and <code>.next</code> classes align each link to the sides of the page:</p>
+		<div class="container">
+			<ul class="pager">
+				<li class="previous"><a href="#">Previous</a></li>
+				<li class="next"><a href="#">Next</a></li>
+			</ul>
+		</div>
+		<hr>
+		<h2>Disable</h2>
+		<p>To disable either the previous or next link, use <code>.disabled</code> class.</p>
+		<div class="container">
+			<ul class="pager">
+				<li class="previous disabled"><a href="#">Previous</a></li>
+				<li class="next"><a href="#">Next</a></li>
+			</ul>
+		</div>
+		<br><br>
+	</body>
+</html>

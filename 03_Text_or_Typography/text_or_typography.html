@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text / Typography</title>
+	<link rel="icon" href="icon/bootstrap.png">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+		hr{
+			border: 1px dashed red;
+		}
+	</style>
+</head>
+<body>
+<!-- 
+Bootstrap's Default Settings:
+============================
+Bootstrap's global default font-size is 14px, with a line-height of 1.428.
+	This is applied to the <body> element and all paragraphs (<p>).
+	In addition, all <p> elements have a bottom margin that equals half their computed line-height (10px by default). -->
+		<div class="container">
+			<!--Headings-->
+			<h2>Headings : <code>&lt;h1&gt; - &lt;h6&gt;</code></h2><br>
+				<h1>h1 Bootstrap heading</h1><!-- (36px) -->
+  				<h2>h2 Bootstrap heading</h2><!--  (30px) -->
+  				<h3>h3 Bootstrap heading</h3><!--  (24px) -->
+  				<h4>h4 Bootstrap heading</h4><!--  (18px) -->
+  				<h5>h5 Bootstrap heading</h5><!--  (14px) -->
+  				<h6>h6 Bootstrap heading</h6><!--  (12px) -->
+  				<hr>
+  			<!--Secondary Text-->
+  			<h2>Secondary Text : <code>&lt;small&gt;</code></h2><br>
+  				<h1>h1 heading <small>secondary text</small></h1>
+  				<h2>h2 heading <small>secondary text</small></h2>
+  				<h3>h3 heading <small>secondary text</small></h3>
+  				<h4>h4 heading <small>secondary text</small></h4>
+  				<h5>h5 heading <small>secondary text</small></h5>
+  				<h6>h6 heading <small>secondary text</small></h6>
+  				<hr>
+			<!--Highlight-->
+			<h2>Highlight : <code>&lt;mark&gt;</code></h2><br>
+				<p>Use the mark element to <mark>highlight</mark> text.</p>
+				<hr>
+			<!--Dotted Underline-->
+			<h2>Dotted Underline : <code>&lt;abbr&gt;</code></h2><br>
+				<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+				<hr>
+			<!--Blockquotes-->
+			<h2>Blockquotes : <code>&lt;blockquote&gt;</code></h2><br>
+				<blockquote>
+    				<p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+    				<footer>From WWF's website</footer>
+  				</blockquote>
+				<hr>
+			<!--Blockquotes Reverse-->
+			<h2>Blockquotes Reverse : </h2><code>.blockquote</code><br>
+				<blockquote class="blockquote-reverse">
+    				<p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+    				<footer>From WWF's website</footer>
+  				</blockquote>
+				<hr>
+			<!-- Description List -->
+			<h2>Description List : <code>&lt;dl&gt;</code></h2><br>
+				<dl>
+    				<dt>Coffee</dt>
+    				<dd>- black hot drink</dd>
+    				<dt>Milk</dt>
+    				<dd>- white cold drink</dd>
+  				</dl> 
+				<hr>
+			<!--Code Snippets-->
+			<h2>Code Snippets : <code>&lt;code&gt;</code></h2><br>
+				<p>The following HTML elements: <code>span</code>, <code>section</code>, and <code>div</code> defines a section in a document.</p>
+				<hr>
+			<!-- Keyboard Inputs -->
+			<h2>Keyboard Inputs : <code>&lt;kbd&gt;</code></h2><br>
+				<p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+				<hr>
+			<!--Pre Element-->
+			<h2>Pre Element : <code>&lt;pre&gt;</code></h2><br>
+				<pre>
+					Text in a pre element
+					is displayed in a fixed-width
+					font, and it preserves
+					both      spaces and
+					line breaks.
+				</pre>
+				<hr>
+			<!--Contextual Classes-->	
+			<p><span class="h2">Contextual Classes : </span><code>.text-muted, .text-primary, .text-success, .text-info, .text-warning, and .text-danger</code></p><br><br>
+				<p class="text-muted">This text is muted.</p>
+  				<p class="text-primary">This text is important.</p>
+  				<p class="text-success">This text indicates success.</p>
+  				<p class="text-info">This text represents some information.</p>
+  				<p class="text-warning">This text represents a warning.</p>
+  				<p class="text-danger">This text represents danger.</p>
+				<hr>
+			<!--Contextual Background Classes-->
+			<p><span class="h2">Contextual Background Classes : </span><code>.bg-primary, .bg-success, .bg-info, .bg-warning, and .bg-danger</code></p><br><br>
+				<p class="bg-primary">This text is important.</p>
+  				<p class="bg-success">This text indicates success.</p>
+  				<p class="bg-info">This text represents some information.</p>
+  				<p class="bg-warning">This text represents a warning.</p>
+  				<p class="bg-danger">This text represents danger.</p>
+				<hr>
+			<!-- Lead -->
+			<p><span class="h2">Lead :</span> <code>.lead</code></p>
+				<p class="lead">This paragraph stands out.</p>
+				<p>This <span class="lead">paragraph</span> stands out.</p>
+				<hr>
+
+			<!-- small -->
+			<p><span class="h2">Small :</span> <code>.small</code></p>
+				<p>This paragraph is <span class="small">smaller</span></p>
+				<hr>
+			
+			
+			<!-- Text alignment-->
+				<!-- 
+				.text-left 		->		Indicates left-aligned text	
+				.text-center 	->		Indicates center-aligned text	
+				.text-right 	->		Indicates right-aligned text	
+				.text-justify 	->		Indicates justified text
+				.text-nowrap 	->		Indicates no wrap text 
+				-->
+			<p><code>.text-left, .text-right, .text-center, .text-justify and .text-nowrap</code></p>
+				<p class="text-left">Left-aligned text.</p>
+  				<p class="text-right">Right-aligned text.</p>      
+  				<p class="text-center">Center-aligned text.</p>
+  				<p class="text-justify">We will create a basic grid system that starts out stacked on extra small devices, before becoming horizontal on larger devices.
+
+				The following example shows a simple "stacked-to-horizontal" two-column layout, meaning it will result in a 50%/50% split on all screens, except for extra small screens, which it will automatically stack (100%):</p>      
+  				<p class="text-nowrap">Sequences of whitespace will collapse into a single whitespace. Text will never wrap to the next line. The text continues on the same line until a &lt;br&gt; tag is encountered</p>
+				<hr>
+				<!-- 
+				.text-lowercase 	->	Indicates lowercased text	
+				.text-uppercase 	->	Indicates uppercased text	
+				.text-capitalize 	->	Indicates capitalized text 
+				-->
+
+			<p><code>.text-lowercase, .text-uppercase and .text-capitalize</code></p>
+				<p class="text-lowercase">LOWERCASED Tex.</p>
+  				<p class="text-uppercase">uppercased text.</p>      
+  				<p class="text-capitalize">capitalized text.</p>
+  				<hr>
+			<!-- 
+				.initialism ->	Displays the text inside an <abbr> element in a slightly smaller font size -->
+				<p><code>.initialism</code></p>
+					<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948. (normal abbr)</p>      
+  				<p>The <abbr title="World Health Organization" class="initialism">WHO</abbr> was founded in 1948. (slightly smaller abbr)</p>
+				<hr>
+				<!-- 
+					.list-unstyled ->	Removes the default list-style and left margin on list items (works on both <ul> and <ol>). This class only applies to immediate children list items (to remove the default list-style from any nested lists, apply this class to any nested lists as well) -->
+				<p><code>.list-unstyled</code></p>
+					<ul class="list-unstyled">
+  						<li>Coffee</li>
+  						<li>Tea
+    						<ul>
+      						<li>Black tea</li>
+      						<li>Green tea</li>
+   					 	</ul>
+  					 	</li>
+ 					 	<li>Milk</li>
+  					</ul>
+  					<hr>
+					<!-- 
+						.list-inline ->	Places all list items on a single line 
+					-->
+				<p><code>.list-inline</code></p>
+					<ul class="list-inline">
+    					<li>Coffee</li>
+    					<li>Tea</li>
+    					<li>Milk</li>
+  					</ul>
+  					<hr>
+  				<!-- 
+  					.dl-horizontal ->	Lines up the terms (<dt>) and descriptions (<dd>) in <dl> elements side-by-side. Starts off like default <dl>s, but when the browser window expands, it will line up side-by-side 
+  					-->
+  					<p><code>.dl-horizontal</code></p>
+						<dl class="dl-horizontal">
+    						<dt>Coffee</dt>
+    							<dd>- black hot drink</dd>
+    						<dt>Milk</dt>
+   						 		<dd>- white cold drink</dd>
+  						</dl>
+  						<hr>
+  					<!-- 
+  						.pre-scrollable ->	Makes a <pre> element scrollable 
+  						-->
+  					<p><code>.pre-scrollable</code></p>
+  						<pre class="pre-scrollable">
+  							Text in a pre element
+  							is displayed in a fixed-width
+  							font, and it preserves
+  							both      spaces and
+  							line breaks.
+  							If you add the .pre-scrollable class, 
+  							the pre element gets a max-height of 350px and provides a y-axis scrollbar:
+  						</pre>
+  						<hr>
+					<!-- h1 - h6 headings using classes -->
+					<p><code>.h1 , .h2 , .h3 , .h4 , .h4 and  .h6</code></p>
+						<div class="h1">h1 Bootstrap heading</div>
+						<div class="h2">h2 Bootstrap heading</div>
+						<div class="h3">h3 Bootstrap heading</div>
+						<div class="h4">h4 Bootstrap heading</div>
+						<div class="h5">h5 Bootstrap heading</div>
+						<div class="h6">h6 Bootstrap heading</div>
+						<hr>
+					<!-- 
+						<del> ->	Indicates deleted text: Deleted text 
+						-->
+					<p><code>&lt;del&gt;</code></p>
+						<p>Use the del element to indicate <del>deleted text</del>.</p>
+						<hr>
+					<!-- 
+						<s> ->	Indicates no longer relevant text: No longer relevant text	 
+						-->
+					<p><code>&lt;s&gt;</code></p>
+						<p>Use the s element to indicate <s>text that is no longer relevant</s>.</p>
+						<hr>
+					<!-- 
+						<ins> ->	Indicates inserted text: Inserted text	 
+						-->
+					<p><code>&lt;ins&gt;</code></p>
+						<p>Use the ins element to indicate <ins>inserted text</ins>.</p>
+						<hr>
+					<!-- 
+						<u> ->	Indicates underlined text: Underlined text	 
+						-->
+					<p><code>&lt;u&gt;</code></p>
+						<p>Use the u element to indicate <u>underlined text</u>.</p>
+						<hr>
+					<!-- 
+						<strong> ->	Indicates bold text: Bold text	 
+						-->
+					<p><code>&lt;strong&gt;</code></p>
+						<p>Use the strong element to indicate <strong>bold text</strong>.</p>
+						<hr>
+					<!-- 
+						<em> ->	Indicates italic text: Italic text 
+						-->
+					<p><code>&lt;em&gt;</code></p>
+						<p>Use the em element to indicate <em>italic text</em>.</p>
+						<hr>
+					<!-- 
+						<address> ->	Presents contact information 
+						-->
+						<p><code>&lt;address&gt;</code></p>
+							<address>
+    							<strong>Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.</strong><br> 
+    							Example.com<br>
+    							Box 564, Disneyland<br>
+    							USA
+  							</address>
+  							<hr>
+					<!-- 
+						<ul> ->	Indicates an unordered list	 
+						-->
+						<p><code>&lt;ul&gt;</code></p>
+							 <ul>
+    							<li>Coffee</li>
+    							<li>Tea
+      							<ul>
+        							<li>Black tea</li>
+        							<li>Green tea</li>
+      							</ul>
+    							</li>
+    							<li>Milk</li>
+  							</ul>
+  							<hr>
+					<!-- 
+						<ol> ->	Indicates an ordered list 
+						-->
+						<p><code>&lt;ol&gt;</code></p>
+							<ol>
+    							<li>Coffee</li>
+    							<li>Tea</li>
+    							<li>Milk</li>
+  							</ol>
+  							<hr>
+  						<!-- 
+  							<var> ->	Indicates variables: x = ab + y 
+  							-->
+  						<p><code>&lt;var&gt;</code></p>
+  							<p><var>x</var> = <var>a</var><var>b</var> + <var>y</var></p>
+  							<hr>
+  						<!-- 
+  							<samp> ->	Indicates sample output from a computer program: Sample output 
+  							-->
+  						<p><code>&lt;samp&gt;</code></p>
+  							<p><samp>This text is output from a computer program....</samp></p>
+  							<hr>
+  						<!-- 
+  							.pull-left ->	Floats an element to the left	
+  							 -->
+  						<p><code>.pull-left</code></p>
+  							<div class="pull-left">Float an element to the left</div>
+  							<hr>
+						<!-- 
+							.pull-right ->	Floats an element to the right	 
+						-->
+						<p><code>.pull-right</code></p>
+							<div class="pull-right">Float an element to the right</div>
+							<br>
+							<hr>
+						<!-- 
+							.center-block ->	Sets an element to display:block with margin-right:auto and margin-left:auto	 
+						-->
+						<p><code>.center-block</code></p>
+							<div class="center-block" style="background-color:yellow;width:200px;">This div will be centered.</div>
+							<hr>
+						<!-- 
+							.clearfix ->	Clears floats	 
+						-->
+						<!-- More details
+							https://stackoverflow.com/questions/8554043/what-is-a-clearfix 
+						-->
+						<p><code>.clearfix</code></p>
+						<br>
+							Without <code>.clearfix</code>
+							<div class="bg-info">
+  								<button class="btn btn-secondary pull-left">Example Button floated left</button>
+  								<button class="btn btn-secondary pull-right">Example Button floated right</button>
+							</div>
+							<br><br><br>
+							With <code>.clearfix</code>
+							<div class="bg-info clearfix">
+  								<button class="btn btn-secondary pull-left">Example Button floated left</button>
+  								<button class="btn btn-secondary pull-right">Example Button floated right</button>
+							</div>
+							
+							<hr>
+						<!-- 
+							.show ->	Forces an element to be shown (display:block)	 
+						-->
+						<p><code>.show</code></p>
+							<p>The .show class forces an element to be shown (display:block):</p>
+  							<p class="show">This paragraph is forced to be shown (display:block).</p>
+  							<hr>
+						<!-- 
+							.hidden ->	Forces an element to be hidden (display:none) 
+						-->
+						<p><code>.hidden</code></p>
+							<p>The .hidden class forces an element to be hidden (display:none):</p>
+  							<p class="hidden">This paragraph is forced to be hidden (display:none).</p>
+  							<hr>
+						<!-- 
+							.invisible ->	Forces an element to be invisible (visibility:hidden). Will take up space on page even though it is invisible 
+						-->
+						<p><code>.invisible</code></p>
+							<p>The .invisible class makes an element invisible (visibility:hidden) - will take up space on page:</p>
+  							<p class="invisible">This paragraph is forced to be hidden (visibility:hidden).</p>
+  							<hr>
+  						<!-- 
+  							.text-hide ->	Helps replace an element's text content with a background image	 
+  						-->
+  						<p><code>.text-hide</code></p>
+  							<p>The .text-only class replaces an element's text content with a background image:</p>
+						  <div class="text-hide">Some text inside a div element.</div>
+						  <hr>
+						<!-- 
+							.close ->	Indicates a close icon	 
+						-->
+						<p><code>.close</code></p>
+							<p>The .close class indicates a close icon.</p>
+  							<div style="padding:50px;width:400px;background-color:#f1f1f1;">
+    							<span>The close icon floats to the right:</span>
+    							<button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+  							</div>
+  							<hr>
+						<!-- 
+							.caret ->	Indicates dropdown functionality (will reverse automatically in dropup menus) 
+						-->
+						<p><code>.caret</code></p>
+							<p>The .caret class indicates dropdown functionality and direction: <span class="caret"></span></p>
+  							<p>The .caret class used on a button:</p>
+  							<div class="btn-group">
+    							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></button>
+    							<ul class="dropdown-menu" role="menu">
+      							<li><a href="#">A link</a></li>
+      							<li><a href="#">Another link</a></li>
+      							<li><a href="#">Something else here</a></li>
+    							</ul>
+  							</div>
+  							<hr>
+  					<p>More details</p>
+						<a href="https://www.w3schools.com/bootstrap/bootstrap_typography.asp" >https://www.w3schools.com/bootstrap/bootstrap_typography.asp</a><br>
+						<a href="https://www.w3schools.com/bootstrap/bootstrap_ref_css_text.asp" >https://www.w3schools.com/bootstrap/bootstrap_ref_css_text.asp</a><br>
+						<a href="https://www.w3schools.com/bootstrap/bootstrap_ref_css_helpers.asp" >https://www.w3schools.com/bootstrap/bootstrap_ref_css_helpers.asp</a>
+		</div>
+</body>
+</html>
+

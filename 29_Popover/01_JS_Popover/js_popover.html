@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>JS Popover</title>
+		<link rel="icon" href="icon/bootstrap.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+			}
+			/* Popover */
+  			#popover_custom_css .popover {
+   				border: 2px dotted red;
+  			}
+  			/* Popover Header */
+  			#popover_custom_css .popover-title {
+    			background-color: #73AD21; 
+    			color: #FFFFFF; 
+    			font-size: 28px;
+    			text-align:center;
+  			}
+  			/* Popover Body */
+  			#popover_custom_css .popover-content {
+    			background-color: coral;
+    			color: #FFFFFF;
+    			padding: 25px;
+  			}
+  			/* Popover Arrow */
+  			#popover_custom_css .arrow {
+   				border-right-color: red !important;
+  			}
+  			/* The greater than sign (>) selector in CSS is used to select the element with a specific parent. It is called as element > element selector. It is also known as the child combinator selector which means that it selects only those elements which are direct children of a parent. It looks only one level down the markup structure and not further deep down. Elements which are not the direct child of the specified parent is not selected. */
+  			#popover_custom_css .popover > .arrow, #popover_custom_css .popover >  .arrow::after {
+  				border-right-color: blue !important;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>Popover Example</h3>
+		<!-- The Popover plugin is similar to tooltips; it is a pop-up box that appears when the user clicks on an element. The difference is that the popover can contain much more content -->
+		<div class="container" id="popover_1">
+			<p>Popovers are not CSS-only plugins, and must therefore be initialized with jQuery: select the specified element and call the popover() method.</p>
+			<div style="margin-left: 150px">
+				<a href="#" id="anchor_popover" data-toggle="popover" title="Anchor Popover Header" data-placement="left" data-content="Some content inside the popover">Toggle popover</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<button class="btn btn-success btn-md" id="button_popover" data-toggle="popover" title="Button Popover Header" data-content="Some content inside the popover">Button</button>
+			</div>
+		</div>
+		<hr>
+		<h2>Popover Options</h2>
+		<div class="container" id="animate_popover">
+			<p><code>animation</code></p>
+			<!-- Specifies whether to add a CSS fade transition effect when opening and closing the popover
+			true - Add a fading effect
+			false - Do not add a fading effect
+			By default true
+			-->
+			<p>The <code>animation</code> option specifies whether to add a CSS fade transition effect when opening and closing the popover.</p>
+			<div>
+				<button class="btn btn-success btn-md">Click me (animation: true)</button>
+				<button class="btn btn-warning btn-md">Click me (animation: false)</button>
+			</div>
+			<hr>
+		</div>
+		<div class="container" id="container_popover">
+			<p><code>container</code></p>
+			<!-- Appends the popover to a specific element.
+			Example: container: 'body'
+			By default false
+			true - not display tooltip
+			false - display tooltip
+			String - display tooltip on specific element -->
+			<p>The <code>container</code> option appends the popover to a specific element.</p>
+			<div class="parent">
+				<button class="btn btn-success btn-md">Click me</button>
+			</div>
+			<hr>
+		</div>
+		<div class="container" id="content_title_popover">
+			<p><code>content and title</code></p>
+			<p>The <code>title</code> option specifies the header text of the popover.</p>
+			<p>The <code>content</code> option specifies the text that should be displayed inside the popover's body.</p>
+			<div>
+				<button class="btn btn-success btn-md">Click me</button>
+			</div>
+			<hr>
+		</div>
+		<div class="container" id="delay_popover">
+			<p><code>delay</code></p>
+			<!-- Specifies the number of milliseconds it will take to open and close the popover. -->
+			<p>The <code>delay</code> option specifies the number of milliseconds it will take to open and close the popover.</p>
+			<p>This popover will take 1000 milliseconds to open and close.</p>
+			<button class="btn btn-success btn-md">Click me</button><br><br>
+			<p>This popover will take 500 milliseconds to open, and 1000 ms to close.</p>
+			<button class="btn btn-danger btn-md">Click me</button>
+			<hr>
+		</div>
+		<div class="container" id="html_popover">
+			<p><code>html</code></p>
+			<!-- Specifies whether to accept HTML tags in the popover:
+			
+			true - Accept HTML tags
+			false - Do not accept HTML tags
+			By default false-->
+			<p>The <code>html</code> option specifies whether to accept HTML tags in the popover.</p>
+			<button class="btn btn-success btn-md">Click me</button>
+			<hr>
+		</div>
+		<div class="container" id="placement_popover">
+			<p><code>placement</code></p>
+			<!-- Specifies the popover position. Possible values:
+			"top" - Popover on top
+			"bottom" - Popover on bottom
+			"left" - Popover on left
+			"right" - Popover on right
+			"auto" - Lets the browser decide the position of the popover. For example, if the value is "auto left", the popover will display on the left side when possible, otherwise on the right. If the value is "auto bottom", the popover will display at the bottom when possible, otherwise on the top
+			By default "right" -->
+			<p>The <code>placement</code> option specifies the popover position.</p>
+			<div>
+				<button class="btn btn-warning btn-md">Top</button>
+				<button class="btn btn-success btn-md">Bottom</button>
+				<button class="btn btn-danger btn-md">Left</button>
+				<button class="btn btn-default btn-md">Right</button>
+			</div>
+			<hr>
+		</div>
+		<div class="container" id="selector_popover">
+			<p><code>selector</code></p>
+			<!-- Adds the popover to a specified selector
+				String - Adds the popover to a specified selector
+			By default false-->
+			<p>The <code>selector</code> option adds a popover to a specified selector.</p>
+			<button class="btn btn-success btn-md">Click me</button>
+			<hr>
+		</div>
+		<div class="container" id="trigger_popover">
+			<p><code>trigger</code></p>
+			<p>The <code>trigger</code> option specifies how the popover is triggered.</p>
+			<div>
+				<button class="btn btn-success btn-md">Click me</button>
+				<button class="btn btn-warning btn-md">Hover over me</button>
+				<button class="btn btn-danger btn-md">Focus (tab or click)</button>
+			</div>
+		</div>
+		<hr>
+		<h2>Popover Methods</h2>
+		<div class="container" id="popover_options">
+			<p><code>.popover(options)</code></p>
+			<!-- Activates the popover with an option. -->
+			<p>The <code>placement</code> option specifies the popover position.</p>
+			<div>
+				<button class="btn btn-warning btn-md">Top</button>
+				<button class="btn btn-success btn-md">Bottom</button>
+				<button class="btn btn-danger btn-md">Left</button>
+				<button class="btn btn-default btn-md">Right</button>
+			</div>
+			<hr>
+		</div>
+		<div class="container" id="popover_methods">
+			<p><code>.popover("show") , .popover("hide") , .popover("toggle") and .popover("destroy")</code></p>
+			<a href="#" class="btn btn-default" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Popover Example</a>
+			<div>
+				<p>Click on the buttons to manually control the popover above:</p>
+				<button type="button" class="btn btn-primary">Show</button>
+				<button type="button" class="btn btn-warning">Hide</button>
+				<button type="button" class="btn btn-success">Toggle</button>
+				<button type="button" class="btn btn-danger">Destroy</button>
+			</div>
+		</div>
+		<hr>
+		<h2>Popover Events</h2>
+		<div class="container" id="popover_events">
+			<a href="#" class="btn btn-default" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Popover Example</a>
+			<div>
+				<p>The <code>show.bs.popover</code> event occurs when the popover is about to be shown.</p>
+				<p>The <code>shown.bs.popover</code> event occurs when the popover is fully shown.</p>
+				<p>The <code>hide.bs.popover</code> event occurs when the popover is about to be hidden.</p>
+				<p>The <code>hidden.bs.popover</code> event occurs when the popover is fully hidden.</p>
+				<button type="button" class="btn btn-primary">Show</button>
+				<button type="button" class="btn btn-warning">Hide</button>
+				<button type="button" class="btn btn-success">Toggle</button>
+				<button type="button" class="btn btn-danger">Destroy</button>
+			</div>
+		</div>
+		<hr>
+		<h3>Popover Custom CSS Example</h3>
+		<div class="container" id="popover_custom_css">
+			<button class="btn btn-default" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</button>
+		</div>
+		<br><br><br>
+		<script>
+			$(document).ready(function(){
+				/*Popover Example*/
+				/*$('#popover_1 [data-toggle="popover"]').popover();   */
+				/*or*/
+				$('#anchor_popover').popover();
+				$('#button_popover').popover();
+				/*-----------------------------------*/
+				/*animation*/
+				$('#animate_popover .btn-success').popover({title: "Header", content: "Blabla", animation: true});
+				$('#animate_popover .btn-warning').popover({title: "Header", content: "Blabla", animation: false});
+				/*Container*/
+				$('#container_popover .btn').popover({title: "Header", content: "Blabla", container: ".parent"});
+				/*title and container*/
+				$('#content_title_popover .btn').popover({title: "Header", content: "Text in popover body",});
+				/*delay*/
+				$('#delay_popover .btn-success').popover({title: "Header", content: "Blabla", delay: 1000});
+				$('#delay_popover .btn-danger').popover({title: "Header", content: "Blabla", delay: {show: 500, hide: 1000}});
+				/*html*/
+				$('#html_popover .btn').popover({title: "<h1><strong>HTML</strong> inside <code>the</code> <em>popover</em></h1>", content: "Blabla <br> <h2>Cool stuff!</h2>", html: true, placement: "right"});
+				/*placement*/
+				$('#placement_popover .btn-warning').popover({title: "Header", content: "Blabla", placement: "top"});
+				$('#placement_popover .btn-success').popover({title: "Header", content: "Blabla", placement: "bottom"});
+				$('#placement_popover .btn-danger').popover({title: "Header", content: "Blabla", placement: "left"});
+				$('#placement_popover .btn-default').popover({title: "Header", content: "Blabla", placement: "right"});
+				/*selector*/
+				$('#selector_popover').popover({title: "Header", content: "Blabla", selector: ".btn"});
+				/*Trigger*/
+				$('#trigger_popover .btn-success').popover({title: "Header", content: "Blabla", trigger: "click"});
+				$('#trigger_popover .btn-warning').popover({title: "Header", content: "Blabla", trigger: "hover"});
+				$('#trigger_popover .btn-danger').popover({title: "Header", content: "Blabla", trigger: "focus"});
+				/*.popover(options)*/
+				$('#popover_options .btn-warning').popover({title: "Header", content: "Blabla", placement: "top"});
+				$('#popover_options .btn-success').popover({title: "Header", content: "Blabla", placement: "bottom"});
+				$('#popover_options .btn-danger').popover({title: "Header", content: "Blabla", placement: "left"});
+				$('#popover_options .btn-default').popover({title: "Header", content: "Blabla", placement: "right"});
+				/*.popover("show") , .popover("hide") , .popover("toggle") and .popover("destroy")*/
+				$("#popover_methods .btn-primary").click(function(){
+					$("#popover_methods [data-toggle='popover']").popover('show');
+				});
+				$("#popover_methods .btn-warning").click(function(){
+					$("#popover_methods [data-toggle='popover']").popover('hide');
+				});
+				$("#popover_methods .btn-success").click(function(){
+					$("#popover_methods [data-toggle='popover']").popover('toggle');
+				});
+				$("#popover_methods .btn-danger").click(function(){
+					$("#popover_methods [data-toggle='popover']").popover('destroy');
+				});
+				/*Popover_Events*/
+				$("#popover_events .btn-primary").click(function(){
+				$("#popover_events [data-toggle='popover']").popover('show');
+				});
+				$("#popover_events .btn-warning").click(function(){
+				$("#popover_events [data-toggle='popover']").popover('hide');
+				});
+				$("#popover_events .btn-success").click(function(){
+				$("#popover_events [data-toggle='popover']").popover('toggle');
+				});
+				$("#popover_events .btn-danger").click(function(){
+					$("#popover_events [data-toggle='popover']").popover('destroy');
+				});
+				$("#popover_events [data-toggle='popover']").on('show.bs.popover', function(){
+				alert('The popover is about to be shown.');
+				});
+				$("#popover_events [data-toggle='popover']").on('shown.bs.popover', function(){
+				alert('The popover is now fully shown.');
+				});
+				$("#popover_events [data-toggle='popover']").on('hide.bs.popover', function(){
+				alert('The popover is about to be hidden.');
+				});
+				$("#popover_events [data-toggle='popover']").on('hidden.bs.popover', function(){
+				alert('The popover is now hidden.');
+				});
+				/*Popover Custom CSS Example*/
+				$('#popover_custom_css [data-toggle="popover"]').popover();   
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>JS Collapse</title>
+		<link rel="icon" href="icon/bootstrap.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+			.thumbnail img{
+				height: 200px;
+				}
+		</style>
+	</head>
+	<body>
+		<h2>Collapse Methods</h2>
+		<div class="container">
+			<p>The toggle method toggles the collapsible content.</p>
+			<p>The show method shows the collapsible content.</p>
+			<p>The hide method hides the collapsible content.</p>
+			<button type="button" id="btn_1" class="btn btn-primary">Toggle</button>
+			<button type="button" id="btn_2" class="btn btn-success">Show</button>
+			<button type="button" id="btn_3" class="btn btn-warning">Hide</button>
+			
+			<div id="collapse_1" class="collapse">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+		</div>
+		<hr>
+		<h2>Collapse Events</h2>
+		<div class="container">
+			<h2>Collapsible Methods</h2>
+			<p>The toggle method toggles the collapsible content.</p>
+			<p>The show method shows the collapsible content.</p>
+			<p>The hide method hides the collapsible content.</p>
+			<button type="button" id="btn_4" class="btn btn-primary">Toggle</button>
+			<button type="button" id="btn_5" class="btn btn-success">Show</button>
+			<button type="button" id="btn_6" class="btn btn-warning">Hide</button>
+			
+			<div id="collapse_2" class="collapse">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+		</div>
+		<hr>
+		<h2>Expand and Collapse Toggle Icon & Text</h2>
+		<div class="container">
+			<button id="btn_7" type="button" class="btn btn-success" data-toggle="collapse" data-target="#collapse_3">
+				<span class="glyphicon glyphicon-collapse-down"></span> Open
+			</button>
+			<div id="collapse_3" class="collapse">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+		</div>
+		<h2>Image Gallery</h2>
+		<div class="container">
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<p>The toggle method toggles the collapsible Images.</p>
+						<p>The show method shows the collapsible Images.</p>
+						<p>The hide method hides the collapsible Images.</p>
+						<button type="button" id="btn_8" class="btn btn-primary">Toggle</button>
+						<button type="button" id="btn_9" class="btn btn-success">Show</button>
+						<button type="button" id="btn_10" class="btn btn-warning">Hide</button>
+					</div>
+					<div class="panel-body collapse" id="imageGallery">
+						<div class="col-xs-4">
+							<a href="img/bicycle.jpg" class="thumbnail" target="_bank">
+								<p>Bicycle</p>
+								<img src="img/bicycle.jpg"  />
+							</a>
+						</div>
+						<div class="col-xs-4">
+							<a href="img/iphone.jpg" class="thumbnail" target="_bank">
+								<p>IPhone</p>
+								<img src="img/iphone.jpg" />
+							</a>
+						</div>
+						<div class="col-xs-4">
+							<a href="img/ocean.jpg" class="thumbnail" target="_bank">
+								<p>Ocean</p>
+								<img src="img/ocean.jpg"/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="height: 350px"></div>
+		<script>
+		$(document).ready(function(){
+			/*Collapse Methods*/
+			$("#btn_1").click(function(){
+				$("#collapse_1").collapse('toggle');
+			});
+			$("#btn_2").click(function(){
+				$("#collapse_1").collapse('show');
+			});
+			$("#btn_3").click(function(){
+				$("#collapse_1").collapse('hide');
+			});
+			/*Collapse Events*/
+			$("#btn_4").click(function(){
+    			$("#collapse_2").collapse('toggle');
+  			});
+  			$("#btn_5").click(function(){
+    			$("#collapse_2").collapse('show');
+  			});
+  			$("#btn_6").click(function(){
+    			$("#collapse_2").collapse('hide');
+  			});
+  			$("#collapse_2").on('show.bs.collapse', function(){
+   			alert('The collapsible content is about to be shown.');
+  			});
+  			$("#collapse_2").on('shown.bs.collapse', function(){
+    			alert('The collapsible content is now fully shown.');
+  			});
+  			$("#collapse_2").on('hide.bs.collapse', function(){
+    			alert('The collapsible content is about to be hidden.');
+  			});
+  			$("#collapse_2").on('hidden.bs.collapse', function(){
+    			alert('The collapsible content is now hidden.');
+  			});
+  			/*Expand and Collapse Toggle Icon & Text*/
+  			$("#collapse_3").on("hide.bs.collapse", function(){
+				$("#btn_7").html('<span class="glyphicon glyphicon-collapse-down"></span> Open');
+			});
+			$("#collapse_3").on("show.bs.collapse", function(){
+				$("#btn_7").html('<span class="glyphicon glyphicon-collapse-up"></span> Close');
+			});
+			/*Image Gallery*/
+			$("#btn_8").click(function(){
+				$("#imageGallery").collapse('toggle');
+			});
+			$("#btn_9").click(function(){
+				$("#imageGallery").collapse('show');
+			});
+			$("#btn_10").click(function(){
+				$("#imageGallery").collapse('hide');
+			});
+		});
+		</script>
+	</body>
+</html>

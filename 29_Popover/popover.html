@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Popover</title>
+		<link rel="icon" href="icon/bootstrap.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+			}
+			/* Popover */
+  			#popover_5 .popover {
+   				border: 2px dotted red;
+  			}
+  			/* Popover Header */
+  			#popover_5 .popover-title {
+    			background-color: #73AD21; 
+    			color: #FFFFFF; 
+    			font-size: 28px;
+    			text-align:center;
+  			}
+  			/* Popover Body */
+  			#popover_5 .popover-content {
+    			background-color: coral;
+    			color: #FFFFFF;
+    			padding: 25px;
+  			}
+  			/* Popover Arrow */
+  			#popover_5 .arrow {
+   				border-right-color: red !important;
+  			}
+  			/* The greater than sign (>) selector in CSS is used to select the element with a specific parent. It is called as element > element selector. It is also known as the child combinator selector which means that it selects only those elements which are direct children of a parent. It looks only one level down the markup structure and not further deep down. Elements which are not the direct child of the specified parent is not selected. */
+  			#popover_5 .popover > .arrow, #popover_5 .popover >  .arrow::after {
+  				border-right-color: blue !important;
+			}  			
+		</style>
+	</head>
+	<body>
+		<!-- The Popover plugin is similar to tooltips; it is a pop-up box that appears when the user clicks on an element. The difference is that the popover can contain much more content. -->
+		<h3>Popover Example</h3>
+		<div class="container" id="popover_1">
+			<a href="#" data-toggle="popover" title="Anchor Popover Header" data-content="Some content inside the popover">Anchor Popover</a>
+			<button type="button" data-toggle="popover" title="Anchor Popover Header" data-content="Some content inside the popover">Button Popover</button>
+		</div>
+		<!-- To create a popover, add the data-toggle="popover" attribute to an element.
+		Use the title attribute to specify the header text of the popover, and use the data-content attribute to specify the text that should be displayed inside the popover's body -->
+		<hr>
+		<h2>Positioning Popovers</h2>
+		<!-- By default, the popover will appear on the right side of the element.
+		Use the data-placement attribute to set the position of the popover on top, bottom, left or the right side of the element -->
+		<p>The <code>data-placement</code> attribute specifies the popover position.</p>
+		<p>Using <code>&lt;a&gt;</code></p>
+		<div class="container" id="popover_2">
+			<ul class="list-inline">
+				<li><a href="#" title="Top Header" data-toggle="popover" data-placement="top" data-content="Content">Top</a></li>
+				<li><a href="#" title="Bottom Header" data-toggle="popover" data-placement="bottom" data-content="Content">Bottom</a></li>
+				<li><a href="#" title="LeftHeader" data-toggle="popover" data-placement="left" data-content="Content">Left</a></li>
+				<li><a href="#" title="Right Header" data-toggle="popover" data-placement="right" data-content="Content">Right</a></li>
+				<li><a href="#" title="Auto Header" data-toggle="popover" data-placement="auto" data-content="Content">Auto</a></li>
+				<li><a href="#" title="Auto RightHeader" data-toggle="popover" data-placement="auto right" data-content="Content">Auto Right</a></li>
+			</ul>
+			<!-- You can also use the data-placement attribute with a value of "auto", which will let the browser decide the position of the popover. For example, if the value is "auto left", the popover will display on the left side when possible, otherwise on the right. -->
+			<hr>
+			<p>Using <code>&lt;button&gt;</code></p>
+			<ul class="list-inline">
+				<li><button type="button" class="btn btn-default" title="Top Header" data-toggle="popover" data-placement="top" data-content="Content">Top</button></li>
+				<li><button type="button" class="btn btn-primary" title="Bottom Header" data-toggle="popover" data-placement="bottom" data-content="Content">Bottom</button></li>
+				<li><button type="button" class="btn btn-success" title="LeftHeader" data-toggle="popover" data-placement="left" data-content="Content">Left</button></li>
+				<li><button type="button" class="btn btn-warning" title="Right Header" data-toggle="popover" data-placement="right" data-content="Content">Right</button></li>
+				<li><button type="button" class="btn btn-info" title="Auto Header" data-toggle="popover" data-placement="auto" data-content="Content">Auto</button></li>
+				<li><button type="button" class="btn btn-danger" title="Auto RightHeader" data-toggle="popover" data-placement="auto right" data-content="Content">Auto Right</button></li>
+			</ul>
+			<hr>
+			<p>Using <code>&lt;input&gt;</code></p>
+			<input type="text" class="form-control" title="Text Header" data-toggle="popover" data-placement="right" data-content="Content" placeholder="Enter Text"><br>
+			<input type="button" class="btn btn-dark" title="Button Header" data-toggle="popover" data-placement="top" data-content="Content" value="Button"><br><br>
+			<input type="submit"  class="btn btn-dark" title="SUbmit Button Header" data-toggle="popover" data-placement="left" data-content="Content" value="Submit">
+			<input type="reset" " class="btn btn-dark" title="Reset Button Header" data-toggle="popover" data-placement="right" data-content="Content" value="Reset"><br><br>
+			<p>and more........</p>
+		</div>
+		<hr>
+		<h2>Closing Popovers</h2>
+		<div class="container" id="popover_3">
+			<p><code>data-trigger="focus"</code></p>
+			<!-- By default, the popover is closed when you click on the element again. However, you can use the data-trigger="focus" attribute which will close the popover when clicking outside the element -->
+			<a href="#" title="Dismissible popover" data-toggle="popover" data-trigger="focus" data-content="Click anywhere in the document to close this popover">Click me</a>
+			<hr>
+			<p><code>data-trigger="hover"</code></p>
+			<!-- If you want the popover to be displayed when you move the mouse pointer over the element, use the data-trigger attribute with a value of "hover -->
+			<a href="#" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content">Hover over me</a>
+		</div>
+		<hr>
+		<h2>Popover Options</h2>
+		<div class="container" id="popover_4">
+			<p><code>data-animation</code></p>
+			
+			<!--
+			Specifies whether to add a CSS fade transition effect when opening and closing the popover
+			true - Add a fading effect
+			false - Do not add a fading effect
+			By default true-->
+			<p>The <code>data-animation<</code> option specifies whether to add a CSS fade transition effect when opening and closing the popover.</p>
+			<div>
+				<button class="btn btn-success btn-md" title="Animation True" data-toggle="popover" data-animation="true" data-content="Some content">Click me (animation: true)</button>
+				<button class="btn btn-warning btn-md" title="Animation False" data-toggle="popover" data-content="Some content" data-animation="false">Click me (animation: false)</button>
+			</div>
+			<hr>
+			<p><code>data-container</code></p>
+			<!--
+			Appends the popover to a specific element.
+			Example: container: 'body'
+			By default false
+			true - not display popover
+			false - display popover
+			String - display popover on specific element	-->
+			<p>The <code>container</code> option appends the popover to a specific element.</p>
+			<div class="parent">
+				<button class="btn btn-success btn-md" data-container=".parent" title="Container Header" data-toggle="popover" data-content="Some content">Click me</button>
+			</div>
+			<hr>
+			<p><code>data-delay</code></p>
+			<!-- Specifies the number of milliseconds it will take to open and close the popover. -->
+			<p>The <code>delay</code> option specifies the number of milliseconds it will take to open and close the popover.</p>
+			<p>This popover will take 1000 milliseconds to open and close.</p>
+			<div>
+				<button class="btn btn-success btn-md" data-delay="1000" title="Delay Header" data-toggle="popover" data-content="Some content">Click me</button>
+			</div>
+			<hr>
+			<p><code>data-content and data-title</code></p>
+			<p>The <code>data-title</code> option specifies the header text of the popover.</p>
+			<p>The <code>data-content</code> option specifies the text that should be displayed inside the popover's body.</p>
+			<div>
+				<button class="btn btn-success btn-md" data-title="Title Header" data-toggle="popover" data-content="Some content">Click me</button>
+			</div>
+			<hr>
+			<p><code>data-html</code></p>
+			<!-- Specifies whether to accept HTML tags in the popover:
+			
+			true - Accept HTML tags
+			false - Do not accept HTML tags
+			By default false	-->
+			<p>The <code>data-html</code> option specifies whether to accept HTML tags in the popover.</p>
+			<div>
+				<button class="btn btn-success btn-md" data-html="true" title="<h1>HTML</h1> Header" data-toggle="popover" data-content="Some content">Click me</button>
+			</div>
+			<hr>
+			<p><code>data-placement</code></p>
+			<!--Specifies the popover position. Possible values:
+			"top" - Popover on top
+			"bottom" - Popover on bottom
+			"left" - Popover on left
+			"right" - Popover on right
+			"auto" - Lets the browser decide the position of the popover. For example, if the value is "auto left", the popover will display on the left side when possible, otherwise on the right. If the value is "auto bottom", the popover will display at the bottom when possible, otherwise on the top
+			By default "right" -->
+			<p>The <code>placement</code> option specifies the popover position.</p>
+			<div>
+				<ul class="list-inline">
+					<li><button type="button" class="btn btn-default" data-toggle="popover" data-placement="top" title="Top Header" data-content="Some content">Top</button></li>
+					<li><button type="button" class="btn btn-primary" data-toggle="popover" data-placement="bottom" title="Bottom Header" data-content="Some content">Bottom</button></li>
+					<li><button type="button" class="btn btn-success" data-toggle="popover" data-placement="left" title="Left Header" data-content="Some content">Left</button></li>
+					<li><button type="button" class="btn btn-warning" data-toggle="popover" data-placement="right" title="Right Header" data-content="Some content">Right</button></li>
+					<li><button type="button" class="btn btn-info" data-toggle="popover" data-placement="auto" title="Auto Header" data-content="Some content">Auto</button></li>
+					<li><button type="button" class="btn btn-danger" data-toggle="popover" data-placement="auto left" title="Auto Header" data-content="Some content">Auto Left</button></li>
+				</ul>
+			</div>
+			<hr>
+			<p><code>data-selectors</code></p>
+			<!-- Adds the popover to a specified selector
+				String -Adds the popover to a specified selector
+			By default false-->
+			<p>The <code>selector</code> option adds a popover to a specified selector.</p>
+			<div id="data-selector-popover">
+				<button type="button" id="data-select-btn" class="btn btn-success btn-md" data-toggle="popover" data-selectors="#data-select-btn" title="Selector Header" data-content="Some content">Clcik</button>
+			</div>
+			<hr>
+			<p><code>data-trigger</code></p>
+			<!-- SSpecifies how the popover is triggered. Possible values:
+			"click" - Trigger the popover with a click
+			"hover" - Trigger the popover on hover
+			"focus" - Trigger the popover when it gets focus (by tabbing or clicking .e.g)
+			"manual" - Trigger the popover manually
+			To pass multiple values, separate them with a space
+			By default hover and focus -->
+			<p>The <code>data-trigger</code> option specifies how the popover is triggered.</p>
+			<div>
+				<button class="btn btn-success btn-md" title="On click" data-placement="left" data-toggle="popover" data-trigger="click" data-content="Some content">Click me</button>
+				<button class="btn btn-warning btn-md" data-toggle="popover" title="On Hover" data-trigger="hover" data-content="Some content">Hover over me</button>
+				<button class="btn btn-danger btn-md" data-toggle="popover" title="On focus or click or tab" data-trigger="focus" data-content="Some content">Focus (tab or click)</button>
+			</div>
+		</div>
+		<hr>
+		<h2>Popover Custom CSS Example</h2>
+		<div class="container" id="popover_5">
+			<button type="button" class="btn btn-success btn-md" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</button>
+		</div>
+		<br><br><br><br>
+		<script>
+		$(document).ready(function(){
+			/*Popover Example*/
+			$('#popover_1 [data-toggle="popover"]').popover();
+			/*Positioning Popovers*/
+			$('#popover_2 [data-toggle="popover"]').popover();
+			/*Closing Popovers*/
+			$('#popover_3 [data-toggle="popover"]').popover();
+			/*Popover Options*/
+			$('#popover_4 [data-toggle="popover"]').popover();
+			$('#data-selector-popover [data-toggle="popover"]').popover();
+			/*Popover Custom CSS Example*/
+			$('#popover_5 [data-toggle="popover"]').popover();  
+		});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Tabs and Pills</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="icon/bootstrap.png">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+			
+		</style>
+	</head>
+	<body>
+		
+		<!-- Bootstrap nav component makes it very easy to create navigation components i.e navigation tabs and pills. -->
+		<h2>Basic Navigation</h2>
+		<code>.nav</code>
+		<div class="container">
+			<ul class="nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Service</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</div>
+		<hr>
+		<h2>Tabs</h2>
+		<div class="container">
+			<h2>Basic Navigation Tabs</h2>
+			<code>.nav-tabs</code><br><br>
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Navigation Tabs with Icons</h2>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+					</a>
+				</li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Stacked Navigation Tabs</h2><p>(not used in real time applications)</p>
+			<code>.nav-stacked</code><br><br>
+			<ul class="nav nav-tabs nav-stacked">
+				<li class="active">
+					<a href="#">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+					</a>
+				</li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Justified Navigation Tabs</h2>
+			<code>.nav-justified</code><br><br>
+			<ul class="nav nav-tabs nav-justified">
+				<li class="active">
+					<a href="#">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+					</a>
+				</li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Disabled Navigation Tabs</h2>
+			<code>.disabled</code><br><br>
+			<ul class="nav nav-tabs nav-justified">
+				<li class="active">
+					<a href="#">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li class="disabled">
+					<a href="#">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+					</a>
+				</li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Navigation Tabs with Dropdown Menu</h2>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Mission</a></li>
+						<li><a href="#">Vision</a></li>
+						<li><a href="#">Products</a></li>
+					</ul>
+				</li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Dynamic Navigation Tabs</h2>
+			<p>To make the tabs toggleable, add the <code>data-toggle="tab"</code> attribute to each link. Then add a <code>.tab-pane</code> class with a unique ID for every tab and wrap them inside a div element with class <code>.tab-content</code>.</p>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#tab_home" data-toggle="tab">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li>
+					<a href="#tab_contact" data-toggle="tab">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li>
+					<a href="#tab_about" data-toggle="tab">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+					</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div id="tab_home" class="tab-pane fade in active">
+					<h3>HOME</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div id="tab_contact" class="tab-pane fade">
+					<h3>Contact</h3>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div id="tab_about" class="tab-pane fade">
+					<h3>About</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Pills</h2>
+		<div class="container">
+			<h2>Basic Navigation Pills</h2>
+			<code>.nav-pills</code><br><br>
+			<ul class="nav nav-pills">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Navigation Pills with Icons</h2>
+			<ul class="nav nav-pills">
+				<li class="active">
+					<a href="#">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+					</a>
+				</li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Stacked Navigation Tabs</h2>
+			<code>.nav-stacked</code><br><br>
+			<ul class="nav nav-pills nav-stacked">
+				<li class="active">
+					<a href="#">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+					</a>
+				</li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Justified Navigation Pills</h2>
+			<code>nav-justified</code><br><br>
+			<ul class="nav nav-pills nav-justified">
+				<li class="active">
+					<a href="#">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+					</a>
+				</li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Disabled Navigation Pills</h2>
+			<code>.disabled</code><br><br>
+			<ul class="nav nav-pills nav-justified">
+				<li class="active">
+					<a href="#">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li class="disabled">
+					<a href="#">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+					</a>
+				</li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Navigation Pills with Dropdown Menu</h2>
+			<ul class="nav nav-pills">
+				<li class="active">
+					<a href="#">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Mission</a></li>
+						<li><a href="#">Vision</a></li>
+						<li><a href="#">Products</a></li>
+					</ul>
+				</li>
+			</ul>
+			<hr>
+		</div>
+		<div class="container">
+			<h2>Dynamic Navigation Tabs</h2>
+			<p>To make the tabs toggleable, add the <code>data-toggle="pill"</code> attribute to each link. Then add a <code>.tab-pane</code> class with a unique ID for every tab and wrap them inside a div element with class <code>.tab-content</code>.</p>
+			<ul class="nav nav-pills">
+				<li class="active">
+					<a href="#pill_home" data-toggle="pill">
+						<span class="glyphicon glyphicon-home"></span> Home
+					</a>
+				</li>
+				<li>
+					<a href="#pill_contact" data-toggle="pill">
+						<span class="glyphicon glyphicon-earphone"></span> Contact
+					</a>
+				</li>
+				<li>
+					<a href="#pill_about" data-toggle="pill">
+						<span class="glyphicon glyphicon-info-sign"></span> About
+					</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div id="pill_home" class="tab-pane fade in active">
+					<h3>HOME</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div id="pill_contact" class="tab-pane fade">
+					<h3>Contact</h3>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div id="pill_about" class="tab-pane fade">
+					<h3>About</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+	</body>
+</html>

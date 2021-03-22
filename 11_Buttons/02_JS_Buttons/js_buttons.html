@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>JS Buttons</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="icon/bootstrap.png">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+			#btn-cust_1 {
+				border-radius: 0;
+				}
+			#btn-cust_2 {
+				background: #000;
+				color: #fff;
+				}
+			#btn-cust_2:hover {
+				background: #fff;
+				color: #000;
+				}
+			#btn-cust_3{
+				box-shadow: 1px 2px 5px #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Button Methods</h2>
+		<div class="container">
+			<p>The <strong>toggle</strong> method makes the button look pressed. Click on both buttons, but also click outside the button afterwards to see the difference.</p>
+			<button type="button" id="btn1" class="btn btn-default">Button (toggle)</button>
+			<button type="button" class="btn btn-default">Button (no toggle)</button>
+			<hr>
+		</div>
+		<div class="container">
+			<p>The <strong>loading</strong> method disables the button and changes the button text to "loading...".</p>
+			<button type="button" id="btn2" class="btn btn-default">Example Button</button>
+			<hr>
+		</div>
+		<div class="container">
+			<p>The <strong>reset</strong> method changes the button text to its original text (if changed).</p>
+			<button type="button" id="btn3" class="btn btn-default">Example Button</button>
+			<hr>
+		</div>
+		<div class="container">
+			<p>The <strong>string</strong> method changes the button text.</p>
+			<p><strong>Note:</strong> You must add the <strong>data-STRING-text</strong> attribute with a value of the specified
+			button text, for this example to work.</p>
+			<button type="button" id="btn4" class="btn btn-default" data-somestringvalue-text="Loading Finished" autocomplete="off">Example Button</button>
+			<hr>
+		</div>
+		
+		<hr>
+		<h2>Customize Buttons</h2>
+		<p>remove the rounded borders</p>
+		<div class="container">
+			<p>Button without rounded corners:</p>
+			<button type="button" class="btn btn-success">Rounded corners</button>
+			<button type="button" id="btn-cust_1" class="btn btn-default">No rounded corners</button>
+			<hr>
+		</div>
+		<p>add a specific color</p>
+		<div class="container">
+			<p>Black button:</p>
+			<button type="button" id="btn-cust_2" class="btn btn-default">Button</button>
+			<hr>
+		</div>
+		<p>add shadows</p>
+		<div class="container">
+			<p>Button with shadows:</p>
+			<button type="button" id="btn-cust_3" class="btn btn-default">Button</button>
+		</div>
+		<br><br>
+		<p>More Details</p>
+		<a href="https://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp">https://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp</a><br>
+		<a href="https://www.w3schools.com/bootstrap/bootstrap_ref_js_button.asp">https://www.w3schools.com/bootstrap/bootstrap_ref_js_button.asp</a><br><br>
+		<div style="height: 50px">
+		</div>
+		<script>
+			$(document).ready(function(){
+				/*toggle*/
+				$("#btn1").click(function(){
+					$(this).button('toggle');
+				});
+				/*loading*/
+				$("#btn2").click(function(){
+					$(this).button('loading');
+				});
+				/*reset*/
+				$("#btn3").click(function(){
+					$(this).button("loading").delay(500).queue(function(){
+						$(this).button("reset");
+						$(this).dequeue();
+					});
+				});
+				/*custom message*/
+				$("#btn4").click(function(){
+				$(this).button('loading').delay(1000).queue(function(){
+					$(this).button('somestringvalue');
+					$(this).dequeue();
+				});
+				});
+			});
+		</script>
+	</body>
+</html>

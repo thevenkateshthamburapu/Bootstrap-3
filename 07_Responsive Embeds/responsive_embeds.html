@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Responsive Embeds</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="icon/bootstrap.png">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+			
+		</style>
+	</head>
+	<body>
+		<!-- Also let videos or slideshows scale properly on any device.
+			Classes can be applied directly to <iframe>, <embed>, <video>, and <object> elements.
+			The following example creates a responsive video by adding an .embed-responsive-item class to an <iframe> tag (the video will then scale nicely to the parent element). The containing <div> defines the aspect ratio of the video: -->
+				<div class="container">
+					<h2>Responsive Embed</h2>
+					<p>Create a responsive video and scale it nicely to the parent element.</p>
+					
+					<h2>Aspect ratio 4:3</h2>
+					<div class="embed-responsive embed-responsive-4by3">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+					</div>
+					
+					<h2>Aspect ratio 16:9</h2>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+					</div>
+				</div>
+				<hr>
+				<!-- What is aspect ratio?
+				
+				The aspect ratio of an image describes the proportional relationship between its width and its height. Two common video aspect ratios are 4:3 (the universal video format of the 20th century), and 16:9 (universal for HD television and European digital television). -->
+				<div class="container">
+					<div align="center" class="embed-responsive embed-responsive-16by9">
+						<video autoplay loop class="embed-responsive-item">
+							<source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+						</video>
+					</div>
+				</div>
+				<br><br>
+			</body>
+		</html>

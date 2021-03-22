@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Media Objects</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="icon/bootstrap.png">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+			.gray-class{
+				border-top: 1px solid gray;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Bootstrap provides an easy way to align media objects (like images or videos) to the left or to the right of some content. This can be used to display blog comments, tweets and so on -->
+		<h2>Basic Media Object</h2>
+		<div class="container">
+			<p>Use the <code>.media-left</code> class to left-align a media object. Text that should appear next to the image, is placed inside a container with class <code>.media-body</code>.</p>
+			<p>Use the <code>.media-right</code> class to right-align the media object.</p><br>
+			
+			<!-- Left-aligned media object -->
+			<div class="media">
+				<div class="media-left">
+					<img src="img/male_user_1.png" class="media-object" style="width:60px">
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Left-aligned</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+			<hr>
+			<!-- Right-aligned media object -->
+			<div class="media">
+				<div class="media-body">
+					<h4 class="media-heading">Right-aligned</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="media-right">
+					<img src="img/female_user_1.png" class="media-object" style="width:60px">
+				</div>
+			</div>
+			<hr class="gray-class">
+			<p><code>.media-heading</code> for headings</p>
+			<!-- Left-aligned -->
+			<div class="media">
+				<div class="media-left">
+					<img src="img/male_user_2.png" class="media-object" style="width:60px">
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Jonathan</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+				</div>
+			</div>
+			<!-- Right-aligned -->
+			<div class="media">
+				<div class="media-body">
+					<h4 class="media-heading">Emelia</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="media-right">
+					<img src="img/female_user_2.png" class="media-object" style="width:60px">
+				</div>
+			</div>
+		</div>
+		<!--
+		Use a <div> element with the .media class to create a container for media objects.
+		Use the .media-left class to align the media object (image) to the left, or the .media-right class to align it to the right.
+		Text that should appear next to the image, is placed inside a container with class="media-body".
+		Additionally, you can use .media-heading for headings -->
+		<hr>
+		<h2>Top, Middle or Bottom Alignment</h2>
+		<div class="container">
+			<p>The media object can also be top, middle or bottom-aligned with the <code>.media-top</code>, <code>.media-middle</code> or <code>.media-bottom</code> class:</p><br>
+			<div class="media">
+				<div class="media-left media-top">
+					<img src="img/male_user_1.png" class="media-object" style="width:80px">
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Media Top</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+			<hr>
+			<div class="media">
+				<div class="media-left media-middle">
+					<img src="img/male_user_1.png" class="media-object" style="width:80px">
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Media Middle</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+			<hr>
+			<div class="media">
+				<div class="media-left media-bottom">
+					<img src="img/male_user_1.png" class="media-object" style="width:80px">
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Media Bottom</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Nested Media Objects</h2>
+		<div class="container">
+			<p>Media objects can also be nested (a media object inside a media object):</p><br>
+			<div class="media">
+				<div class="media-left">
+					<img src="img/male_user_1.png" class="media-object" style="width:45px">
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						
+					<!-- Nested media object -->
+					<div class="media">
+						<div class="media-left">
+							<img src="img/female_user_2.png" class="media-object" style="width:45px">
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">Emelia <small><i>Posted on February 19, 2016</i></small></h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<!-- Nested media object -->
+							<div class="media">
+								<div class="media-left">
+									<img src="img/male_user_2.png" class="media-object" style="width:45px">
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Jonathan <small><i>Posted on February 19, 2016</i></small></h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									<!-- Nested media object -->
+									<div class="media">
+										<div class="media-left">
+											<img src="img/female_user_1.png" class="media-object" style="width:45px">
+										</div>
+										<div class="media-body">
+											<h4 class="media-heading">Katherine <small><i>Posted on February 19, 2016</i></small></h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+									</div>
+								</div>
+									
+							</div>
+								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<hr>
+			<p>Media objects can also be nested (a media object inside a media object):</p><br>
+			<div class="media">
+				<div class="media-left">
+					<img src="img/male_user_2.png" class="media-object" style="width:45px">
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Jonathan <small><i>Posted on February 19, 2016</i></small></h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						
+					<!-- Nested media object -->
+					<div class="media">
+						<div class="media-left">
+							<img src="img/female_user_2.png" class="media-object" style="width:45px">
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">Emelia <small><i>Posted on February 20, 2016</i></small></h4>
+							<p>Loem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<!-- Nested media object -->
+							<div class="media">
+								<div class="media-left">
+									<img src="img/male_user_1.png" class="media-object" style="width:45px">
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">John Doe <small><i>Posted on February 21, 2016</i></small></h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div>
+							</div>
+								
+						</div>
+							
+						<!-- Nested media object -->
+						<div class="media">
+							<div class="media-left">
+								<img src="img/female_user_1.png" class="media-object" style="width:45px">
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Katherine <small><i>Posted on February 20, 2016</i></small></h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+							
+					</div>
+				</div>
+					
+				<!-- Nested media object -->
+				<div class="media">
+					<div class="media-left">
+						<img src="img/male_user_2.png" class="media-object" style="width:45px">
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Jonathan <small><i>Posted on February 19, 2016</i></small></h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+	</body>
+</html>

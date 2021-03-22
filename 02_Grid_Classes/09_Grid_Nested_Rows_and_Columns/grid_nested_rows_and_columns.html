@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Nested Rows and Columns</title>
+		<link rel="icon" href="icon/bootstrap.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+				.sidebarContent{
+				background-color:silver;
+				text-align:center;
+				font-size:large;
+				min-height:150px;
+				margin-bottom:10px;
+				}
+				.mainContent{
+				background-color:silver;
+				text-align:center;
+				font-size:large;
+				min-height:310px;
+				}
+				.customDiv {
+				background-color: silver;
+				text-align: center;
+				font-size: large;
+				min-height: 150px;
+				}
+				hr{
+					border-top: 1px dashed red;
+				}
+		</style>
+	</head>
+	<body>
+		<p>Resize the browser window to see the effect.</p>
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3">
+					<!--Nested row-->
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="sidebarContent">Side Bar 1</div>
+						</div>
+					</div>
+					<!--Nested rows-->
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="sidebarContent">Side Bar 2</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-9">
+					<div class="mainContent">Main Content Area</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-5">
+					<div class="customDiv">col 5</div>
+				</div>
+				<div class="col-xs-7">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="customDiv">col 3.5</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="customDiv">col 3.5</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

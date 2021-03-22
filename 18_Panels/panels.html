@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Panels</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="icon/bootstrap.png">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+		</style>
+	</head>
+	<body>
+		<h2>Basic Panel</h2>
+		<!-- A panel in bootstrap is a bordered box with some padding around its content -->
+		<p>Panels are created with the <code>.panel</code> class, and content inside the panel has a <code>.panel-body</code> class</p>
+		<div class="container">
+			<!-- The .panel-default class is used to style the color of the panel.  -->
+			<div class="panel panel-default">
+				<div class="panel-body">A Basic Panel</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Panel Heading</h2>
+		<p>The <code>.panel-heading</code> class adds a heading to the panel</p>
+		<div class="container">
+			<div class="panel panel-default">
+				<div class="panel-heading">Panel Heading</div>
+				<div class="panel-body">Panel Content</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Panel Footer</h2>
+		<p>The <code>.panel-footer</code> class adds a footer to the panel</p>
+		
+		<div class="container">
+			<div class="panel panel-default">
+				<div class="panel-heading">Panel Heading</div>
+				<div class="panel-body">Panel Content</div>
+				<div class="panel-footer">Panel Footer</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Panel Group</h2>
+		<p>To group many panels together, wrap a <code>&lt;div&gt;</code> with class <code>.panel-group</code> around them.
+		The <code>.panel-group</code> class clears the bottom-margin of each panel</p>
+		<div class="container">
+			<p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
+			<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">Panel Header-1</div>
+					<div class="panel-body">Panel Content-1</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">Panel Header-2</div>
+					<div class="panel-body">Panel Content-2</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">Panel Header-3</div>
+					<div class="panel-body">Panel Content-3</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Panels with Contextual Classes</h2>
+		<p>To color the panel, use contextual classes (<code>.panel-default, .panel-primary, .panel-success, .panel-info, .panel-warning, and .panel-danger</code>)</p>
+		<div class="container">
+			<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">Panel with panel-default class</div>
+					<div class="panel-body">Panel Content</div>
+				</div>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Panel with panel-primary class</div>
+					<div class="panel-body">Panel Content</div>
+				</div>
+				<div class="panel panel-success">
+					<div class="panel-heading">Panel with panel-success class</div>
+					<div class="panel-body">Panel Content</div>
+				</div>
+				<div class="panel panel-info">
+					<div class="panel-heading">Panel with panel-info class</div>
+					<div class="panel-body">Panel Content</div>
+				</div>
+				<div class="panel panel-warning">
+					<div class="panel-heading">Panel with panel-warning class</div>
+					<div class="panel-body">Panel Content</div>
+				</div>
+				<div class="panel panel-danger">
+					<div class="panel-heading">Panel with panel-danger class</div>
+					<div class="panel-body">Panel Content</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+	</body>
+</html>

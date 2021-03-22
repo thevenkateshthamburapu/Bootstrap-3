@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>JS Dropdown</title>
+		<link rel="icon" href="icon/bootstrap.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+				/* Style to reverse the caret icon from pointing downwards to upwards */
+			#dropdown_4 .caret.caret-up {
+			border-top-width: 0;
+			border-bottom: 4px solid #fff;
+			}
+			 .dropdown-submenu {
+  				position: relative;
+			}
+
+			 .dropdown-submenu .dropdown-menu {
+  				top: 0;
+  				left: 100%;
+  				margin-top: -1px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Dropdown Methods</h2>
+		<div class="container">
+			<div class="dropdown">
+				<button id="dropdown_1" class="btn btn-primary dropdown-toggle" id="menu1" type="button">Dropdown Example
+				<span class="caret"></span></button>
+				<ul id="dropdown-menu_1" class="dropdown-menu" role="menu" aria-labelledby="menu1">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<h2>Dropdown Events</h2>
+		<!--
+							show.bs.dropdown	Occurs when the dropdown is about to be shown.
+							shown.bs.dropdown	Occurs when the dropdown is fully shown (after CSS transitions have completed)
+							hide.bs.dropdown	Occurs when the dropdown is about to be hidden
+		hidden.bs.dropdown	Occurs when the dropdown is fully hidden (after CSS transitions have completed) -->
+		<div class="container">
+			<p>The <code>show.bs.dropdown</code> event occurs when the dropdown is about to be shown.</p>
+			<p>The <code>shown.bs.dropdown</code> event occurs when the dropdown is fully shown.</p>
+			<p>The <code>hide.bs.dropdown</code> event occurs when the dropdown is about to be hidden.</p>
+			<p>The <code>hidden.bs.dropdown</code> event occurs when the dropdown is fully hidden.</p>
+			<div id="dropdown_2" class="dropdown">
+				<button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Toggle this Dropdown
+				<span class="caret"></span></button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+				</ul>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<p><code>event.relatedTarget</code></p>
+			<p>Click on the Dropdown button below. <code>event.relatedTarget</code> returns the element which triggered the dropdown.</p>
+			<div id="dropdown_3" class="dropdown">
+				<button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Dropdown Button
+				<span class="caret"></span></button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<h2>Change the caret symbol on dropdown</h2>
+		<div class="container">
+			<div id="dropdown_4" class="dropdown">
+				<button id="btn_1" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown
+				<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">HTML</a></li>
+					<li><a href="#">CSS</a></li>
+					<li><a href="#">JavaScript</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<h2>Multi-Level Dropdowns</h2>
+		<div class="container">
+			<!-- We use jQuery to open multi-level dropdowns on click (see script section below). -->
+			<div id="dropdown_5" class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+				<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a tabindex="-1" href="#">HTML</a></li>
+					<li><a tabindex="-1" href="#">CSS</a></li>
+					<li>
+						<a class="test_1" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+							<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+							<li>
+								<a class="test_1" href="#">Another dropdown <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">3rd level dropdown</a></li>
+									<li><a href="#">3rd level dropdown</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<p>we have created a <code>.dropdown-submenu</code> class for multi-level dropdowns (see style section above).</p>
+			<!-- We have added jQuery to open the multi-level dropdown on click. -->
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+				<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a tabindex="-1" href="#">HTML</a></li>
+					<li><a tabindex="-1" href="#">CSS</a></li>
+					<li class="dropdown-submenu">
+						<a class="test_2" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+							<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+							<li class="dropdown-submenu">
+								<a class="test_2" href="#">Another dropdown <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">3rd level dropdown</a></li>
+									<li><a href="#">3rd level dropdown</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<br><br>
+		<p>More Details</p>
+		<a href="https://www.w3schools.com/bootstrap/bootstrap_ref_js_dropdown.asp" target="_bank">https://www.w3schools.com/bootstrap/bootstrap_ref_js_dropdown.asp</a><br>
+		<div style="height: 200px"></div>
+		<script>
+			$(document).ready(function(){
+				/*Dropdown Methods*/
+				$("#dropdown_1").click(function(){
+						$("#dropdown-menu_1").toggle();
+				});
+				/*Dropdown Events*/
+				$('#dropdown_2').on('show.bs.dropdown', function(){
+					alert('The dropdown is about to be shown.');
+				});
+				$('#dropdown_2').on('shown.bs.dropdown', function(){
+					alert('The dropdown is now fully shown.');
+				});
+				$('#dropdown_2').on('hide.bs.dropdown', function(e){
+					alert('The dropdown is about to be hidden.');
+				});
+				$('#dropdown_2').on('hidden.bs.dropdown', function(){
+					alert('The dropdown is now fully hidden.');
+				});
+				/*event.relatedTarget*/
+				$("#dropdown_3").on("show.bs.dropdown", function(event){
+					var x = $(event.relatedTarget).text(); // Get the button text
+					alert("You clicked on: " + x);
+				});
+				/*Change the caret symbol on dropdown*/
+				$("#dropdown_4").on("hide.bs.dropdown", function(){
+					$("#btn_1").html('Dropdown <span class="caret"></span>');
+				});
+				$("#dropdown_4").on("show.bs.dropdown", function(){
+					$("#btn_1").html('Dropdown <span class="caret caret-up"></span>');
+				});
+				/*Multi-Level Dropdowns*/
+				$('#dropdown_5 a.test_1').on("click", function(e){
+					$(this).next('ul').toggle();
+					e.stopPropagation();
+					e.preventDefault();
+				});
+				/*Multi-Level Dropdowns Sub Menu*/
+				$('.dropdown-submenu a.test_2').on("click", function(e){
+    				$(this).next('ul').toggle();
+   					e.stopPropagation();
+    				e.preventDefault();
+  				});
+			});
+		</script>
+	</body>
+</html>

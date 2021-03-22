@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Accordion</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="icon/bootstrap.png">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			hr{
+				border-top: 1px dashed red;
+				}
+			.thumbnail img{
+				height: 200px;
+				}
+		</style>
+	</head>
+	<body>
+		<!-- Use the data-parent attribute to make sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown -->
+		<h2>Accordion Example</h2>
+		<div class="container">
+			<p><strong>Note:</strong> The <code>data-parent</code> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+			<div class="panel-group" id="accordion_1">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion_1" href="#collapse1">Collapsible Group 1</a>
+						</h4>
+					</div>
+					<div id="collapse1" class="panel-collapse collapse in">
+						<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion_1" href="#collapse2">Collapsible Group 2</a>
+						</h4>
+					</div>
+					<div id="collapse2" class="panel-collapse collapse">
+						<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion_1" href="#collapse3">Collapsible Group 3</a>
+						</h4>
+					</div>
+					<div id="collapse3" class="panel-collapse collapse">
+						<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Accordion Image Examples</h2>
+		<div class="container" id="image_panel_1">
+			<div class="row">
+				<div class="col-xs-6">
+					<div id="accordion_2" class="panel-group">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+								<a href="#panelBodyOne" data-toggle="collapse"
+									data-parent="#accordion_2">
+									<span class="glyphicon glyphicon-menu-up"></span>
+									Bicycle
+								</a>
+								</h4>
+							</div>
+							<div id="panelBodyOne" class="panel-collapse collapse in">
+								<div class="panel-body">
+									<img class="img-responsive" src="img/bicycle.jpg"
+									alt="Bicycle" height="200px" />
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+								<a href="#panelBodyTwo" data-toggle="collapse"
+									data-parent="#accordion_2">
+									<span class="glyphicon glyphicon-menu-down"></span>
+									IPhone
+								</a>
+								</h4>
+							</div>
+							<div id="panelBodyTwo" class="panel-collapse collapse">
+								<div class="panel-body">
+									<img class="img-responsive" src="img/iphone.jpg"
+									alt="IPhone" height="200px"/>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+								<a href="#panelBodyThree" data-toggle="collapse"
+									data-parent="#accordion_2">
+									<span class="glyphicon glyphicon-menu-down"></span>
+									Ocean
+								</a>
+								</h4>
+							</div>
+							<div id="panelBodyThree" class="panel-collapse collapse">
+								<div class="panel-body">
+									<img class="img-responsive" src="img/ocean.jpg"
+									alt="Ocean" height="200px" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="image_panel_2">
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="well">
+						<button class="btn btn-primary" id="btnExpandAll">
+						Expand All
+						</button>
+						<button class="btn btn-primary" id="btnCollapseAll">
+						Collapse All
+						</button>
+					</div>
+					<div id="accordion_3" class="panel-group">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+								<a href="#panelBody_1" data-toggle="collapse"
+									data-parent="#accordion_3">
+									<span class="glyphicon glyphicon-plus-sign"></span>
+									Bicycle
+								</a>
+								</h4>
+							</div>
+							<div id="panelBody_1" class="panel-collapse collapse">
+								<div class="panel-body">
+									<img class="img-responsive" src="img/bicycle.jpg"
+									alt="Bicycle" height="200px" />
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+								<a href="#panelBody_2" data-toggle="collapse"
+									data-parent="#accordion_3">
+									<span class="glyphicon glyphicon-plus-sign"></span>
+									IPhone
+								</a>
+								</h4>
+							</div>
+							<div id="panelBody_2" class="panel-collapse collapse">
+								<div class="panel-body">
+									<img class="img-responsive" src="img/iphone.jpg"
+									alt="IPhone" height="200px"/>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+								<a href="#panelBody_3" data-toggle="collapse"
+									data-parent="#accordion_3">
+									<span class="glyphicon glyphicon-minus-sign"></span>
+									Ocean
+								</a>
+								</h4>
+							</div>
+							<div id="panelBody_3" class="panel-collapse collapse in">
+								<div class="panel-body">
+									<img class="img-responsive" src="img/ocean.jpg"
+									alt="Ocean" height="200px" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p>More Details</p>
+		<a href="http://csharp-video-tutorials.blogspot.com/2016/08/bootstrap-accordion-with-arrows.html" target="_bank" >http://csharp-video-tutorials.blogspot.com/2016/08/bootstrap-accordion-with-arrows.html</a>
+		<script>
+		$(document).ready(function () {
+			/*image_panel_1*/
+			$('#image_panel_1 .collapse')
+			.on('shown.bs.collapse', function () {
+				$(this).parent().find('.glyphicon-menu-down')
+					.removeClass('glyphicon-menu-down')
+					.addClass('glyphicon-menu-up');
+				})
+			.on('hidden.bs.collapse', function () {
+				$(this).parent().find(".glyphicon-menu-up")
+					.removeClass("glyphicon-menu-up")
+					.addClass("glyphicon-menu-down");
+				});
+
+			/*image_panel_2*/
+			$('#image_panel_2 .collapse')
+				.on('shown.bs.collapse', function () {
+					$(this).parent().find('.glyphicon-plus-sign')
+						.removeClass('glyphicon-plus-sign')
+						.addClass('glyphicon-minus-sign');
+					})
+				.on('hidden.bs.collapse', function () {
+					$(this).parent().find(".glyphicon-minus-sign")
+						.removeClass("glyphicon-minus-sign")
+						.addClass("glyphicon-plus-sign");
+					});
+			$('#btnExpandAll').click(function () {
+				$('#image_panel_2 .panel-collapse.collapse').collapse('show');
+			});
+			$('#btnCollapseAll').click(function () {
+				$('#image_panel_2 .panel-collapse.collapse.in').collapse('hide');
+			});
+		});
+		</script>
+	</body>
+</html>
